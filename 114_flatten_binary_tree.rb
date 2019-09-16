@@ -1,25 +1,32 @@
+require 'byebug'
+
 def flatten(root)
+
     return nil if !root
 #   both missing
     
     if !root.right && !root.left
         return root 
     end
-    # left missing
+  # left missing
     return root if !root.left
-#   right missing
-    if !root.right && root.left
-        root.right = root.left
-        root.left = nil
-    end
-
-#   both present
+  
+#   right missing or both present
     
-    currRight = flatten(root.right)
+    if root.right
+        oldRight = flatten(root.right)
+    end
     root.right = flatten(root.left)
     root.left = nil
-    root.right.right = currRight
     
+#   capture the entire thing
+    newRightTail = root.right
+    while (newRightTail.right)
+        newRightTail = newRightTail.right
+    end
+    if oldRight
+        newRightTail.right = oldRight
+    end
     return root
 end
 
@@ -39,10 +46,13 @@ e = TreeNode.new(5)
 f = TreeNode.new(6)
 
 a.left = b
-a.right = e
 b.left = c
-b.right = d
-e.right = f
+
+# a.left = b
+# a.right = e
+# b.left = c
+# b.right = d
+# e.right = f
 
 flatten(a)
 
@@ -52,3 +62,10 @@ while currNode
     puts currNode.val
     currNode = currNode.right
 end
+
+
+        #     1
+        #    / \
+        #   2   5
+        #  / \   \
+        # 3   4   6
