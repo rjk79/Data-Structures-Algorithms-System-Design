@@ -12,6 +12,8 @@ def symmetric(node1, node2)
     # if there was a row with 5s and 6s then there would be an inner pair
     # more outer pair
     # and most outer
+
+    # AKA the recursive call always creates a new inner pair and outerpair
 end
 
 # [1,2,2,3,4,4,3]
