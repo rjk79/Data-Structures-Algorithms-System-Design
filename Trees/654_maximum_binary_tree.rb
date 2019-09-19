@@ -1,3 +1,4 @@
+# each node is the max of the subtree
 def construct_maximum_binary_tree(nums)
     return nil if nums.length == 0
     max = nums.max  
