@@ -7,6 +7,7 @@ var minPathSum = function (grid) {
     for (let i = 0; i < m; i++) {
         for (let j = 0; j < n; j++) {
             if (j < n - 1) {
+                // take the min of what it is now OR how we can get there from an adjacent tile
                 table[i][j + 1] = Math.min(table[i][j + 1], table[i][j] + grid[i][j + 1])
             }
             if (i < m - 1) {

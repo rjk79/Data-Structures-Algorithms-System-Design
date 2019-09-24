@@ -8,8 +8,8 @@ def three_sum(nums)
         right = nums.length - 1
         until left == right
             if nums[i] + nums[left] + nums[right] === 0
-                sub = [nums[i], nums[left], nums[right]].sort!
-                res << sub if !res.include?(sub)
+                sub = [nums[i], nums[left], nums[right]]
+                res << sub 
                 oldLeft = left
                 while nums[oldLeft] == nums[left] && left != right
                     left += 1

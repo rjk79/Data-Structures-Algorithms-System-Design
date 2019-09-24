@@ -19,34 +19,34 @@
 
 // growing n doesnt just change # of iterations, it also changes what those iterations are
 
-var numTrees = (n) => {
-    if (n <= 1) { return 1; }
-    let output = 0;
+// var numTrees = (n) => {
+//     if (n <= 1) { return 1; }
+//     let output = 0;
 
-	// recursive fn that calcs the # of unique binary tree arrangements with n numbers and index i as the head
-    const recurse = (i, n) => {
-// the thing at i is the root so basically the partition
-        const leftNums = i - 1;
-        // num of nodes on left side (1 is being used for the root of the subtree)
-        const rightNums = n - i; 
-        // num of nodes on right side
+// 	// recursive fn that calcs the # of unique binary tree arrangements with n numbers and index i as the head
+//     const recurse = (i, n) => {
+// // the thing at i is the root so basically the partition
+//         let leftNums = i - 1;
+//         // num of nodes on left side (1 is being used for the root of the subtree)
+//         let rightNums = n - i; 
+//         // num of nodes on right side
 
-		// treat the numbers to the left and right of i each as their own binary tree
-		// get the # of unique arrangements of the left tree and right tree
-        const leftTrees = numTrees(leftNums);
-        const rightTrees = numTrees(rightNums);
+// 		// treat the numbers to the left and right of i each as their own binary tree
+// 		// get the # of unique arrangements of the left tree and right tree
+//         const leftTrees = numTrees(leftNums);
+//         const rightTrees = numTrees(rightNums);
         
-		// Total arrangements = unique arrangements of left tree x unique arrangements of right tree
-		// add product to the output
-        output += leftTrees * rightTrees;
-    };
+// 		// Total arrangements = unique arrangements of left tree x unique arrangements of right tree
+// 		// add product to the output
+//         output += leftTrees * rightTrees;
+//     };
 
-    // repeat function treating every index as a potential head of the tree
-// so when n = 6, i = 3 => (1, 2) = left subtree, (3) = root, (4, 5, 6) = right subtree
-    for (let i = 1; i <= n; i += 1) { recurse(i, n); }
+//     // repeat function treating every index as a potential head of the tree
+// // so when n = 6, i = 3 => (1, 2) = left subtree, (3) = root, (4, 5, 6) = right subtree
+//     for (let i = 1; i <= n; i += 1) { recurse(i, n); }
 
-    return output;
-};
+//     return output;
+// };
 
 
 // INVALID SOLN
@@ -68,3 +68,27 @@ var numTrees = (n) => {
 
 //     return count
 // }
+
+var numTrees = function (n) {
+    if (n === 1 || n === 0) return 1
+    let res = 0
+    const _numTrees = (n, i) => {
+        numLeft = i - 1
+        numRight = n - i
+        res += numTrees[numLeft] * numTrees[numRight]
+    }
+    //  moves a partition if the tree were repres by array
+    //  i = idx of root
+    //  left subtree is left side, right vice-versa
+    //  1 node is auto used by root
+    for (let i = 1; i <= n; i++) {
+        _numTrees(n, i)
+    }
+    return res
+};
+
+console.log(numTrees(1))
+console.log(numTrees(2))
+console.log(numTrees(3))
+console.log(numTrees(4))
+console.log(numTrees(5))
