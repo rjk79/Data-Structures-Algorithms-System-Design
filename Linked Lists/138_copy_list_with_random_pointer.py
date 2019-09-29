@@ -18,24 +18,46 @@ def copyRandomList(head):
 #       set the random pointers for clones
     curr = head
     cloneCurr = head.next
-    while curr:
+    while curr.next and curr.next.next:
         cloneCurr.random = curr.random.next
         curr = curr.next.next
 #       extract the clone nodes
     curr = cloneHead
-    while curr:
+    while curr.next and curr.next.next:
         curr.next = curr.next.next
         curr = curr.next.next
         
     return cloneHead
 
-    class Node:
-        def __init__(self, val, next, random):
-            self.val = val
-            self.next = next
-            self.random = random
 
 
+class Node:
+    def __init__(self, val, next, random):
+        self.val = val
+        self.next = next
+        self.random = random
+
+a = Node(1, None, None)
+b = Node(2, None, None)
+c = Node(3, None, None)
+d = Node(4, None, None)
+
+a.next = b
+a.random = b
+b.next = c
+b.random = b
+c.next = d
+c.random = a
+
+d.random = a
+
+
+head = copyRandomList(a)
+while head.next:
+    print (head.val)
+    print (head.next.val)
+    print (head.random.val)
+    head = head.next
 
 
 # clone
