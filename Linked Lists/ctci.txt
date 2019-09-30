@@ -1,0 +1,33 @@
+1. N
+2. N^2
+3. N^2
+4. ab (iter'ing over 2 diff input arr's)            
+5. ab
+6. N
+7. all but last. O(N + M) is O(N) since we don't know M 
+8. a = len of arr, s = len of a str                     (X)
+    a * s(loga + logs)sorting within each string. then sorting all the strings (not nlogn + nlogn)
+    each comparison w/in arr takes longer.
+    comparisons w/in str need to be done for each str
+9. N - adding all vals of BST
+10. sqrt(N) - uses a for(i = 0; i^2 < n; i++)          
+11. N
+12. n! factorial
+13. 2^n
+14. calc'ing 1st n fib nums -> O(2^n) since 2^n + 2^(n-1) + 2^(n-2) etc. (X)
+15. O(n)
+16. logn
+
+VI  1. O(b)
+    2. O(b)
+    3. O(1)
+    4. a/b = O(1)
+    5. logn
+    6. sqrt n
+    7. n BST (not bal)
+    8. n (not BST)
+    9. N^2
+    10. logn
+    11. c is len of str, k is num of letters in alphab -> c*k^c (X)
+    12. nlogn + n(logn)
+    

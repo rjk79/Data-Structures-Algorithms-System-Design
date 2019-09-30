@@ -1,8 +1,15 @@
+# basic format of backtracking
+
+# res = []
+# def recurse
+#       res.append
+#       for loop
+#               curr.append
+#               recurse
+#               curr.pop
+# return res
+
 def subsets(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[List[int]]
-        """
         
         #here we need a global wise list, each time we just append to the result
         rslt=[]
