@@ -30,4 +30,99 @@ VI  1. O(b)
     10. logn
     11. c is len of str, k is num of letters in alphab -> c*k^c (X)
     12. nlogn + n(logn)
-    
+
+    string runtime is very weird..
+    concating a word at a time to a list -> O(n^2)
+
+Arrays and Strings
+constant access time
+hard to insert and del
+
+Hash Table
+    hash code points to an index. a linked list is stored at that idx
+ArrayList
+    doubles in size to accomodate -> amortized
+
+1.1 
+def isUnique(str):
+    two pointers to make sure each char has no match
+
+    solution: ask if ASCII or Unicode str
+        array where arr[i] = True / False if letter is present
+1.2
+def isPermutation
+    permutation method
+    OR
+    backtracking recurs func to find all permutations?
+
+    solution: better to SORT or use hash of counts like anagrams
+1.3 URLify
+    split, join?
+
+    common to manip str from end so there is buffer and dont need to worry about overwriting
+1.4 Permutation of Palindrome
+    create an arr of chars
+    take out all spaces
+    make sure theres even num of each char, but one can be odd
+
+1.5 One Away
+    ruby - use hash to track quants of chars
+    iter thru keys to make sure they differ by only 1
+
+    soln: long...
+        2nd arg is larger in oneEditInsert
+        doesnt let pointers be offset by more than 1
+1.6 String Compression
+    two pointers
+1.7 Rotate Image
+    transpose?
+
+    solution: iter through "layers". iter thru row and col idxs, swapping top with right, right with bot, bot with left, left with top
+1.8
+    matrix 0's
+
+    solution: still need to set 1st cell in row and col to 0 before modifying entire row/col
+        otherw u mess up your iteration
+        marking the 1st cells doesnt matter b/c you wouldve already iterated past the 1st in row + col
+1.9
+    .rotate
+
+    solution: str1 + str1 accounts for xyxy partitions
+        so just check if that inc. str2
+
+Linked List
+    linear access time
+    constant insert/delete at head
+    Deleting a node
+    Runner techniq
+
+2.1 Remove Dups
+    two pointers
+2.2 Return Kth to Last El
+    two offset pointers
+2.3 Delete Middle Node
+
+    solution: transfer date to curr node then delete next node (X)
+2.4 Partition
+    create 2 sep lists then join them
+2.5 Sum Lists 
+    did.
+    carryOver = bool
+2.6
+    2 pointers starting at middle
+2.7 
+    did.
+    fast and slow pointer
+2.8 Loop Detection <-- (X)
+
+    solution: fast (2x) and slow pointer. when they collide, move slow pointer back to head.
+        then move BOTH at a rate of 1 until they collide
+
+3. Stacks and Queues
+4. Trees and Graphs
+5. Bit Manipulation
+8. Recursion and Dynamic Programming
+9. System Design
+10. Sorting and Searching
+11. Testing
+XI. Advanced Topics
