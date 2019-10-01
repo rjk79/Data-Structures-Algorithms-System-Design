@@ -15,7 +15,8 @@ def subsets(self, nums):
         rslt=[]
         
         def dfs(temp, idx):
-            rslt.append(temp[:]) #pass temp[:] with shollow copy so that we wont change the result of rslt when temp is changed
+                # shallow copy changes orig
+            rslt.append(temp[:]) #pass temp[:] with shallow copy so that we wont change the result of rslt when temp is changed
             for i in range(idx, len(nums)):
                 temp.append(nums[i])
                 #backtrack
