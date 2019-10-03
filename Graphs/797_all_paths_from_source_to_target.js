@@ -2,7 +2,7 @@ var allPathsSourceTarget = function (graph) {
     let target = graph.length - 1
 
     const _allPaths = function (node) {
-        debugger
+        
         if (node == target) return [target]
         let res = []
         graph[node].forEach(neighbor => {

@@ -1,3 +1,6 @@
+# better not to queue up the all 4 tiles around a water tile that include a land
+# better to perf a dfs as soon as u find a land
+
 
 def numIslands(grid):
             #     stack?
@@ -9,6 +12,7 @@ def numIslands(grid):
     dirs = [[0, 1], [1, 0], [-1, 0], [0, -1]]
     traversingLand = False
     count = 0
+    # gather up all the waters
     for i in range(len(grid)):
         for j in range(len(grid[0])):
             if grid[i][j] == "0":
@@ -27,8 +31,9 @@ def numIslands(grid):
             
         for x, y in dirs:
             xi, yj = x + i, y + j
-            
+            # keep in bounds
             if 0 <= xi < len(grid) and 0 <= yj < len(grid[0]):
+                # appends squares in all 4 dirs
                 if grid[xi][yj] == "1":
                     stack.append([xi, yj])
 

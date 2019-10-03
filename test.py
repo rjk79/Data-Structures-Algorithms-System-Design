@@ -1,7 +1,6 @@
 def banana():
-    res = []
-    for x in range(1):
-        res.append(1)
-    return res
+    arr = [1, 2, 3]
+    res = [0 for i in range(len(arr))]
+    print (res)
 
-print (banana())
+(banana())

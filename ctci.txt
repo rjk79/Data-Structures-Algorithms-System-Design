@@ -178,6 +178,7 @@ Linked List
         topo sort
         change shape of dependencies
         iter thru classes until u dont take on a full iter
+        finished Set
 
    4.8 1st Common Ancestor
         walk up 1 node at a time, checking if ==
@@ -185,15 +186,20 @@ Linked List
         append the results of:
         Pre-LeftFirst-Order and
         Pre-RightFirst-Order
+
+        solution: weave
     4.10 Check if Subtree
         DFS with isSubtree(root.left) || isSubtree(root.right)
+
+        solution: use preorder representations of each tree
+            see if smaller one is a substring
     4.11 Random Node
         BFS to gather all nodes, then .random()
     4.12 Paths with Sum
         need to get all subpaths..
         can get all routes via backtracking then filter out ones with valid windowed subarrays?
 
-
+        solution: DFS with a DFS on each recurse call (for each node)
 
 
 

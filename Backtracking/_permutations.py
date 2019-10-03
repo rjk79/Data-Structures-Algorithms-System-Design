@@ -1,4 +1,5 @@
 # [1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 2, 1], [3, 1, 2]
+
 def A_n_k(a, n, k, depth, used, curr, ans):
   '''
   Implement permutation of k items out of n items
