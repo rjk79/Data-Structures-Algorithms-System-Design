@@ -17,3 +17,14 @@
 # iter the keys in the hash
 # add it to the key's [] if its a permut
 # if its not a permutation of anything, then create a new key for it
+
+def group_anagrams(strs)
+    hash = Hash.new {|h, k| h[k] = []}
+    strs.map!.with_index{|str, idx| [str, str.split("").sort.join]}
+    strs.each {|group|
+        hash[group[1]] << group[0]
+    }
+    hash.values
+end
+
+print group_anagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
