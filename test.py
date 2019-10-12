@@ -22,3 +22,10 @@ print (re.match(".+", "a"))
 # print(0b10001 ^ 0b10000)
 
 print(bin(~10010))
+
+# b = [1, 2, 3]
+# print(map(lambda a: a + 1, b))
+print bin(38)
+
+print int("0110101", 2)
+print int("1011010", 2)

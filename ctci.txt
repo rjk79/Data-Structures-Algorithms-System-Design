@@ -204,8 +204,40 @@ Linked List
 
 
 5. Bit Manipulation
+    Negative numbers
+        invert then +1
+        1 << i  to create masks
+        ~(1 << i) to create mask for clearing
 8. Recursion and Dynamic Programming
 9. System Design
 10. Sorting and Searching
+                            time    worst   space
+        bubble sort         n^2             1
+        selection sort      n^2             1
+        merge sort          nlogn           n ** since DFS
+        quick sort          nlogn   n^2     logn **
+        radix sort          mn  
 11. Testing
 XI. Advanced Topics
+    AVL trees 
+        - left and right rotations
+        - rotations subjugate parent (becomes child's child)
+        - orig parent also takes same-side orig child's child 
+    Red / Black trees -
+        4 rules: 
+            1. root is black
+            2. all paths to leaves must have same # of black nodes
+            3. red nodes can only have black children
+        Inserting:
+            the inserted node comes in as a leaf and RED
+            if parent is red, then do adjustments:
+                N = current, P = parent, U = parent, G = grandparent
+                if uncle is RED:
+                    flip colors of P, G, and U 
+                if uncle is BLACK or NULL:
+                    if GPN form triangle:
+                        rotate at G
+                        then swap original G and P colors
+                    if GPN form line:
+                        rotate at P
+                keep doing adjustments until cond are restored 
