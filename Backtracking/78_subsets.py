@@ -16,14 +16,15 @@
 def subsets(nums):
         res = []
         def recurse(curr, idx):
-# base case: append to res
+# base case
+# append to res
 # for loop
-# change
 # recurse
 # undo
-#            
-            res.append(curr)
-            # this loop wont happen eventually -> base case
+# NEED TO MAKE SHALLOW COPY!! can do : or ::
+            res.append(curr[:])
+            # if rem == []:
+            #     return 
             for i in range(idx, len(nums)):
                 curr.append(nums[i])
                 recurse(curr, i + 1)

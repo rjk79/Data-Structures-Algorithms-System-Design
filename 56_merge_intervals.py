@@ -8,18 +8,22 @@
 # Explanation: Since intervals [1,3] and [2,6] overlaps, merge them into [1,6].
 # 9:29
 def merge(intervals):
-    i = 0
-    # import pdb; pdb.set_trace()
-# 0       1
-#     0        1
-    while i < len(intervals) - 1:
-        int1, int2 = intervals[i], intervals[i + 1]
-        if ( int2[1] >= int1[1] >= int2[0] ) or (int1[1] >= int2[1] >= int1[0] ):
-            extremes = intervals[i] + intervals[i + 1]
-            newInterval = [min(extremes), max(extremes)]
-            intervals[i], intervals[i + 1] = newInterval, newInterval
-        i += 1
-    return intervals
+    res = []
+    # sort by lower bound
+        intervals.sort(key = lambda interval : interval[0])
+        for curr in intervals:
+            if not res: #if its the 1st thing:
+                res.append(curr)
+            else:
+                last = res[-1]
+# because theyre sorted, you know the curr interval isnt completely before the res[-1] one
+# if last thing's upper >= current things lower:
+#   then modify the last thing's upper to be the max of the 2
+                if last[-1] >= curr[0]:
+                    res[-1] = [last[0], max(last[-1], curr[-1])]
+                else:
+                    res.append(curr)
+        return res
             
 # iter over each
 #   iter over each other

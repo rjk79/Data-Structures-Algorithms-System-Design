@@ -204,10 +204,43 @@ Linked List
 
 
 5. Bit Manipulation
+    XOR tricks:
+        x^(x&(x- 1)) to find right most
     Negative numbers
         invert then +1
         1 << i  to create masks
         ~(1 << i) to create mask for clearing
+    5.1 Insertion
+        (M << i) | N
+    5.2 Binary to String
+        bin(num)
+    5.3 Flip Bit to Win
+        iter thru 
+        find longest thing you can make with <=1 0
+    5.4 Next Number
+        find rightmost bit
+    5.5 n - 1 is n, except the rightmost 1 becomes 0 and everyth after becomes 0
+        when you & them, they all become 0
+        rets False
+        1000
+        0111
+    5.6 Conversion
+        11101, 01111
+        easy.
+    5.7 Pairwise Swap
+        easy??
+    5.8 Draw Line
+
+6.  two ropes. each 1 hour to burn. time 15min. uneven densities
+        1st: light at both ends. that times half an hour
+        2nd: light at one end, at the same time
+        when 1st is done, light the 2nd at other end
+        you know it'll have 30min left so 2 flames will 1/2 the time => 15 min
+        
+
+
+
+
 8. Recursion and Dynamic Programming
 9. System Design
 10. Sorting and Searching
@@ -240,4 +273,4 @@ XI. Advanced Topics
                         then swap original G and P colors
                     if GPN form line:
                         rotate at P
-                keep doing adjustments until cond are restored 
+                keep doing adjustments until rule 3 is restored 

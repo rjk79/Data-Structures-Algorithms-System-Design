@@ -27,5 +27,13 @@ print(bin(~10010))
 # print(map(lambda a: a + 1, b))
 print bin(38)
 
-print int("0110101", 2)
-print int("1011010", 2)
+# print int("0110101", 2)
+# print int("1011010", 2)
+
+c = "app le"
+print (c.split(" "))
+
+arr = [ [1, 2], [2, 3], [3, 4], [1, 3], [6, 3] ]
+# ties are sorted in order of appearance
+arr.sort(key = lambda a: a[1])
+print (arr)

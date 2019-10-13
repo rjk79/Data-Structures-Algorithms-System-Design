@@ -5,6 +5,8 @@
 
 # like permutations except constrained by size
 
+# n is the integer youre going up to
+# k is the # of things in each combin. 
 var combine = function(n, k) {
     let nums = []
     # reformat input
