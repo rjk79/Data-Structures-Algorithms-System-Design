@@ -37,3 +37,6 @@ arr = [ [1, 2], [2, 3], [3, 4], [1, 3], [6, 3] ]
 # ties are sorted in order of appearance
 arr.sort(key = lambda a: a[1])
 print (arr)
+
+for i in reversed(range(5)):
+    print(i)
