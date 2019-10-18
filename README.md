@@ -33,13 +33,13 @@ Pathing
 Bellman-Ford
 Dijkstra’s
 (source is “a”)
-Set up distances = {a: 0, b: ∞, c: ∞, d: ∞
-Set up unvisited (a, b, c, d,
-While unvisited.length:
-	Find the closest, unvisited node 
-	Remove from unvisited
-	Check all neighbors
-		If best distance to neighbor is greater than best distance to current + dist from curr to neighbor, then change best to that
+    distances = {a: 0, b: ∞, c: ∞, d: ∞
+    unvisited (a, b, c, d,
+    while unvisited.length:
+        Find the closest, unvisited node 
+        Remove from unvisited
+        For all neighbors
+            If best distance to neighbor is greater than best distance to current + dist from curr to neighbor, then change best to that
 
 Bit manipulation
 ^ finds rightmost 1, finds the one duplicate el
