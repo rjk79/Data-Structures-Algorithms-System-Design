@@ -44,13 +44,37 @@ print bin(38)
 # print int("0110101", 2)
 # print int("1011010", 2)
 
-c = "app le"
-print (c.split(" "))
+# c = "app le"
+# print (c.split(" "))
 
-arr = [ [1, 2], [2, 3], [3, 4], [1, 3], [6, 3] ]
-# ties are sorted in order of appearance
-arr.sort(key = lambda a: a[1])
-print (arr)
+# arr = [ [1, 2], [2, 3], [3, 4], [1, 3], [6, 3] ]
+# # ties are sorted in order of appearance
+# arr.sort(key = lambda a: a[1])
+# print (arr)
 
-for i in reversed(range(5)):
+# for i in reversed(range(5)):
+#     print(i)
+
+
+class ListNode:
+    def __init__(self, val):
+        self.val = val 
+        self.next = None
+
+a = ListNode(1)
+b = ListNode(2)
+c = ListNode(3)
+a.next = b
+b.next = c
+
+a.next, b.next, c.next = b.next, None, a.next
+
+# head = a
+# while head:
+#     print (head.val)
+#     head = head.next
+
+alphabet = [chr(i) for i in range(ord('a'), ord('a')+26)]
+for i,a in enumerate(alphabet):
+    print(a)
     print(i)

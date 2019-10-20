@@ -5,6 +5,10 @@ Sorts and Searches
 	Iterative bin search
 Backtracking
 
+Linked Lists
+swaps
+ghost node
+
 Trees and Graphs
 	BFS, DFS
 	Graph - BFS
