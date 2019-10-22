@@ -25,6 +25,6 @@
 # better dp?
 # store as a heap. sort by profit
 # dont need ending times, just combine if end time < start time
-# if you eclipse start times, itll be hard to add onto them so should make new instance of 
+# if you eclipse start times, itll be hard to add onto them so should make new instance of  
 # [[3, 70], [3, 40]] => [[2, 10] [3, 70], [3, 40]] => [[2, 10] [1, 50], [1, 90]]
 # 
