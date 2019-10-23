@@ -78,3 +78,7 @@ alphabet = [chr(i) for i in range(ord('a'), ord('a')+26)]
 for i,a in enumerate(alphabet):
     print(a)
     print(i)
+
+a = [(2, 2), (2, 1)]
+
+heapq.heapify(a)

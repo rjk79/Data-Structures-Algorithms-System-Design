@@ -18,9 +18,10 @@ def profitableSchemes(G, P, group, profit):
                     dpClone[p2][g2] %= 10**9 + 7
             dp = dpClone
 #       total ways we can get our target profit
-        return sum(dp[-1])
+        return sum(dp[-1]) % 10**9 + 7
 
 print (profitableSchemes(5, 3, [2, 2], [2, 3]))
+print (profitableSchemes(10, 5, [2, 3, 5], [6, 7, 8]))
 
 #           Gang mems
 #       [[1, 0, 0, 0, 0, 0], 
