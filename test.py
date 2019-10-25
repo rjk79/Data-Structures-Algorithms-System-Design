@@ -82,3 +82,7 @@ for i,a in enumerate(alphabet):
 a = [(2, 2), (2, 1)]
 
 heapq.heapify(a)
+
+
+trips [[2,1,5],[3,3,7]]
+for i, v in sorted(x for n, i, j in trips for x in [[i, n], [j, - n]]):
