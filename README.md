@@ -89,3 +89,5 @@ def recurse(curr, idx)
     .pop
 recurse([], 0)
 
+.isdigit
+.isalpha
