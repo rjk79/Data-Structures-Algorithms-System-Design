@@ -7,6 +7,7 @@ Counter.items()
 sorted(    .sort(key=
 reversed(    .reverse
 Find 	rfind()  	like indexOf
+lstrip rstrip
 
 Dynamic Programming
 minChange
