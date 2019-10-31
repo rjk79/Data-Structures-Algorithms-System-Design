@@ -13,7 +13,17 @@ Dynamic Programming
 minChange
 
 Sorts and Searches
-	Iterative bin search
+	Iterative B-search
+        while(lo < hi) {
+    int mid = lo + (hi - lo) / 2;
+    if(Special condition passed)(optional):
+        return mid; 
+    if(condition passed)
+    hi = mid;
+    else 
+    lo = mid + 1;
+    }
+    return lo;
 Backtracking
 
 Trees and Graphs

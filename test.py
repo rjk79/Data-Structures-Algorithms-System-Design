@@ -74,10 +74,10 @@ a.next, b.next, c.next = b.next, None, a.next
 #     print (head.val)
 #     head = head.next
 
-alphabet = [chr(i) for i in range(ord('a'), ord('a')+26)]
-for i,a in enumerate(alphabet):
-    print(a)
-    print(i)
+# alphabet = [chr(i) for i in range(ord('a'), ord('a')+26)]
+# for i,a in enumerate(alphabet):
+#     print(a)
+#     print(i)
 
 a = [(2, 2), (2, 1)]
 
@@ -96,5 +96,23 @@ a = [(2, 2), (2, 1)]
 #         print(x)
 
 
-print sorted(x*y for x in [y, 2, 3] for y in [1, 2])
+# print sorted(x*y for x in [y, 2, 3] for y in [1, 2])
 # second for loop can reference the first loop (makes sense...)
+
+def removeSubfolders(folder):
+#       not removing subfolders in general
+#       we are removing subfolders of folders that we've seen
+        seen = set()
+        res = []
+        for f in folder:
+#           i == 2: /a
+            include = True
+            for i in range(2, len(f)):
+                if f[i] == "/" and f[:i] in seen: 
+                    include = False
+                if f[i] == "/": 
+                    print(seen)
+                    print(f[:i])
+            if include: seen.add(f)
+        return list(seen)
+print(removeSubfolders(["/ah/al/am","/ah/al"]))

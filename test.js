@@ -45,3 +45,7 @@ let { distance, previous } = dijkstras(graph, 'a');
 
 console.log(distance);
 console.log(previous);
+
+let a = [1, 2, 3]
+
+console.log (a.reduce((acc, el)=> el + acc) )

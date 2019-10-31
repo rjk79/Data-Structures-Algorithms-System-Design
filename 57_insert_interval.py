@@ -11,3 +11,11 @@
 # Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8]
 # Output: [[1,2],[3,10],[12,16]]
 # Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
+
+def insertInterval(ints, interval):
+# curr intervals cant be merged
+# find 1st IOA interval where End is greater than start of input interval => MIN
+# then check interval after 1st IOA. if start is less than end time of input, 
+# keep checking intervals down the line until the last IOA int has a start greater than input end time
+    
+

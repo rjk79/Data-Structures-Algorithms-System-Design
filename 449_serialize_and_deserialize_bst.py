@@ -13,7 +13,9 @@ def serialize(root):
         return "".join(res)
 
 def deserialize(data):
-    
+    # root is at [0] 
+    # then come values of left subtree [1:k]
+    #  then come vals of right subtree [k:]
     def helper(arr, i, j):
         if i > j:
             return
