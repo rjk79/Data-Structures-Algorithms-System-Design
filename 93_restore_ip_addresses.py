@@ -4,7 +4,6 @@ def restoreIpAddresses(s):
     return res
     
 def dfs(s, index, path, res):
-    import pdb; pdb.set_trace()
 
     if index == 4:
         if not s:
