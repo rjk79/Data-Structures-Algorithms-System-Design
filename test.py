@@ -117,5 +117,25 @@ def removeSubfolders(folder):
         return list(seen)
 print(removeSubfolders(["/ah/al/am","/ah/al"]))
 
-for i in range(1, 2):
-    print (i)
+# for i in range(1, 2):
+#     print (i)
+
+class ListNode():
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+
+a = ListNode(1)
+b = ListNode(2)
+c = ListNode(3)
+d = ListNode(4)
+a.next = b
+b.next = c
+c.next = d
+
+a.next, b.next, c.next = c, d, b
+
+curr = a
+while curr:
+    print(curr.val)
+    curr = curr.next

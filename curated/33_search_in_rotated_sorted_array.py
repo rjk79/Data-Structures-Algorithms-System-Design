@@ -5,6 +5,7 @@ class Solution:
         hi = len(nums)
         while lo < hi:
             mid = int((lo + hi) / 2)
+# mid and target on same "side"
             if (nums[mid] < nums[0]) == (target < nums[0]):
                 num = nums[mid] 
 # mid and target are on diff "sides" 
