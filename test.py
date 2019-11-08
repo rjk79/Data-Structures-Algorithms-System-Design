@@ -135,7 +135,55 @@ c.next = d
 
 a.next, b.next, c.next = c, d, b
 
-curr = a
+# curr = a
+# while curr:
+#     print(curr.val)
+#     curr = curr.next
+
+
+
+a = ListNode(1)
+b = ListNode(2)
+c = ListNode(3)
+d = ListNode(4)
+e = ListNode(5)
+
+a.next = b
+b.next = c
+c.next = d
+d.next = e
+
+head = a
+slow = a
+fast = a
+# defaults to making the 1ST half LONGER
+while fast.next and fast.next.next:
+    slow = slow.next
+    fast = fast.next.next
+
+newHead = slow.next 
+slow.next = None
+
+prev = ListNode(0)
+curr = newHead
+# DONT MAKE PREV'S .next the head!!! otherwise inf loop
+while curr:
+    third = curr.next
+    curr.next = prev
+    prev = curr
+    curr = third
+
+# 0<-1-2-3
+# p c t
+
+curr = head
 while curr:
     print(curr.val)
     curr = curr.next
+print("working")
+curr = fast
+while curr:
+    print(curr.val)
+    curr = curr.next
+# print(slow.val) 
+# print(fast.val)
