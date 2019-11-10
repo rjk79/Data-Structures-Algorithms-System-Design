@@ -1,16 +1,16 @@
 Python methods
-[[for j in range] for i in range]
-[::][::-1]
-Defaultdict		like Hash.new(0)
-Deque
-Counter.items()
-sorted(    .sort(key=
-reversed(    .reverse
-Find 	rfind()  	like indexOf
-lstrip rstrip
+    [[for j in range] for i in range]
+    [::][::-1]
+    Defaultdict		like Hash.new(0)
+    Deque
+    Counter.items()
+    sorted(    .sort(key=
+    reversed(    .reverse
+    Find 	rfind()  	like indexOf
+    lstrip rstrip
 
 Dynamic Programming
-minChange
+    minChange
 
 Sorts and Searches
 	Iterative B-search
