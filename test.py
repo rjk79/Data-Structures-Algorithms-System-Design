@@ -151,7 +151,7 @@ e = ListNode(5)
 a.next = b
 b.next = c
 c.next = d
-d.next = e
+# d.next = e
 
 head = a
 slow = a
@@ -164,7 +164,8 @@ while fast.next and fast.next.next:
 newHead = slow.next 
 slow.next = None
 
-prev = ListNode(0)
+# better to make None instead of ghost node
+prev = None
 curr = newHead
 # DONT MAKE PREV'S .next the head!!! otherwise inf loop
 while curr:
@@ -181,9 +182,25 @@ while curr:
     print(curr.val)
     curr = curr.next
 print("working")
-curr = fast
+curr = prev
 while curr:
     print(curr.val)
     curr = curr.next
 # print(slow.val) 
 # print(fast.val)
+
+def binarySearch(arr, target):
+    l = 0
+    r = len(arr) 
+    while l < r:
+        mid = (r + l) //2
+        if arr[mid] == target: return mid
+        elif arr[mid] < target:
+            l = mid + 1
+        elif arr[mid] > target:
+            r = mid
+    return -1
+
+print("BSing")
+print(binarySearch([1, 4, 5, 6, 8, 10], 5))
+print(binarySearch([1, 4, 5, 6, 8, 10], 11))
