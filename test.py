@@ -204,3 +204,6 @@ def binarySearch(arr, target):
 print("BSing")
 print(binarySearch([1, 4, 5, 6, 8, 10], 5))
 print(binarySearch([1, 4, 5, 6, 8, 10], 11))
+
+a = [[None for _ in range(5)] for _ in range(3)]
+print(a)

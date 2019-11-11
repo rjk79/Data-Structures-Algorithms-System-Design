@@ -8,6 +8,8 @@ Python methods
     reversed(    .reverse
     Find 	rfind()  	like indexOf
     lstrip rstrip
+    [*zip(*grid)]
+    need star to unpack zip object
 
 Dynamic Programming
     minChange
@@ -15,15 +17,15 @@ Dynamic Programming
 Sorts and Searches
 	Iterative B-search
         while(lo < hi) {
-    int mid = lo + (hi - lo) / 2;
-    if(Special condition passed)(optional):
-        return mid; 
-    if(condition passed)
-    hi = mid;
-    else 
-    lo = mid + 1;
-    }
-    return lo;
+        int mid = lo + (hi - lo) / 2;
+        if(Special condition passed)(optional):
+            return mid; 
+        if(condition passed)
+        hi = mid;
+        else 
+        lo = mid + 1;
+        }
+        return lo;
 Backtracking
 
 Trees and Graphs
