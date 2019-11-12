@@ -16,6 +16,7 @@ Dynamic Programming
 
 Sorts and Searches
 	Iterative B-search
+        lo, hi = 0, len() 
         while(lo < hi) {
         int mid = lo + (hi - lo) / 2;
         if(Special condition passed)(optional):
