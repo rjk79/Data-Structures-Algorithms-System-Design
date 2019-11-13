@@ -207,3 +207,6 @@ print(binarySearch([1, 4, 5, 6, 8, 10], 11))
 
 a = [[None for _ in range(5)] for _ in range(3)]
 print(a)
+
+
+print ("leetcode"[-5:3])
