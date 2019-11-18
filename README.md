@@ -10,6 +10,8 @@ Python methods
     lstrip rstrip
     [*zip(*grid)]
     need star to unpack zip object
+    Arrays: del arr[] or remove(val) 
+    Sets: .add .discard/.remove to remove 
 
 Dynamic Programming
     minChange
