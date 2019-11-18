@@ -1,23 +1,24 @@
-Python methods
-    [[for j in range] for i in range]
-    [::][::-1]
-    Defaultdict		like Hash.new(0)
-    Deque
-    Counter.items()
-    sorted(    .sort(key=
-    reversed(    .reverse
-    Find 	rfind()  	like indexOf
-    lstrip rstrip
-    [*zip(*grid)]
-    need star to unpack zip object
-    Arrays: del arr[] or remove(val) 
-    Sets: .add .discard/.remove to remove 
+###Python methods
+-[[for j in range] for i in range]
+-[::][::-1]
+-Defaultdict		like Hash.new(0)
+-Deque
+-Counter.items()
+-sorted(    .sort(key=
+-reversed(    .reverse
+-Find 	rfind()  	like indexOf
+-lstrip rstrip
+-[*zip(*grid)]
+-need star to unpack zip object
+-Arrays: del arr[] or remove(val) 
+-Sets: .add .discard/.remove to remove 
 
-Dynamic Programming
-    minChange
+###Dynamic Programming
+-minChange
 
-Sorts and Searches
-	Iterative B-search
+###Sorts and Searches
+-Iterative B-search
+```
         lo, hi = 0, len() 
         while(lo < hi) {
         int mid = lo + (hi - lo) / 2;
@@ -29,26 +30,26 @@ Sorts and Searches
         lo = mid + 1;
         }
         return lo;
-Backtracking
+```
+###Trees and Graphs
+-BFS, DFS
+-Graph - BFS
+-X, y
+-Dirs = 
+-Xi, yj if in bounds
+-Topo Sort
 
-Trees and Graphs
-	BFS, DFS
-	Graph - BFS
-	X, y
-	Dirs = 
-	Xi, yj if in bounds
-	Topo Sort
+###Strings and Arrays
+-Kadane’s - largest contig sum in arr
+-Rabin Karp - hashing to find pattern in string
+-Two pointers
+-Slow and Fast pointer
 
-Strings and Arrays
-Kadane’s - largest contig sum in arr
-Rabin Karp - hashing to find pattern in string
-Two pointers
-Slow and Fast pointer
-
-Pathing
-Bellman-Ford
-Dijkstra’s
+###Pathing
+-Bellman-Ford
+-Dijkstra’s
 (source is “a”)
+```
     distances = {a: 0, b: ∞, c: ∞, d: ∞
     unvisited (a, b, c, d,
     while unvisited.length:
@@ -56,23 +57,26 @@ Dijkstra’s
         Remove from unvisited
         For all neighbors
             If best distance to neighbor is greater than best distance to current + dist from curr to neighbor, then change best to that
-
-Bit manipulation
-^ finds rightmost 1, finds the one duplicate el
+```
+###Bit manipulation
+-^ finds rightmost 1, finds the one duplicate el
 + -
 
 
-Self-balancing Trees
-Black Red Trees
+###Self-balancing Trees
+-AVL
+-Black Red Trees
 
-Handy Boilerplate
+##Handy Boilerplate
 
-Graphs
+###Graphs
+```
 dirs = []
 for x, y in dirs:
     xi, yj
     if 0 <= xi < len and 0 <= yj < len
-
+```
+```
 visited = set()
 q = []
 while q:
@@ -81,10 +85,10 @@ while q:
     for neighbor in .neighbors:
         if not in visited:
             q.append
+```
 
-
-Trees
-
+###Trees
+```
 .left
 .right
 
@@ -92,10 +96,10 @@ q = []
 newQ = []
 newQ << .left
 newQ << .right
+```
 
-
-Backtracking
-
+###Backtracking
+```
 res = []
 def recurse(curr, idx)
     res.append(curr[::]) if
@@ -104,6 +108,6 @@ def recurse(curr, idx)
     recurse
     .pop
 recurse([], 0)
-
-.isdigit
-.isalpha
+```
+-.isdigit
+-.isalpha
