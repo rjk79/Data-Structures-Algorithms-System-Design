@@ -1,4 +1,4 @@
-###Python methods
+### Python methods
 -[[for j in range] for i in range]
 -[::][::-1]
 -Defaultdict		like Hash.new(0)
@@ -13,10 +13,10 @@
 -Arrays: del arr[] or remove(val) 
 -Sets: .add .discard/.remove to remove 
 
-###Dynamic Programming
+### Dynamic Programming
 -minChange
 
-###Sorts and Searches
+### Sorts and Searches
 -Iterative B-search
 ```
         lo, hi = 0, len() 
@@ -31,7 +31,7 @@
         }
         return lo;
 ```
-###Trees and Graphs
+### Trees and Graphs
 -BFS, DFS
 -Graph - BFS
 -X, y
@@ -39,13 +39,13 @@
 -Xi, yj if in bounds
 -Topo Sort
 
-###Strings and Arrays
+### Strings and Arrays
 -Kadane’s - largest contig sum in arr
 -Rabin Karp - hashing to find pattern in string
 -Two pointers
 -Slow and Fast pointer
 
-###Pathing
+### Pathing
 -Bellman-Ford
 -Dijkstra’s
 (source is “a”)
@@ -58,18 +58,18 @@
         For all neighbors
             If best distance to neighbor is greater than best distance to current + dist from curr to neighbor, then change best to that
 ```
-###Bit manipulation
+### Bit manipulation
 -^ finds rightmost 1, finds the one duplicate el
 + -
 
 
-###Self-balancing Trees
+### Self-balancing Trees
 -AVL
 -Black Red Trees
 
-##Handy Boilerplate
+## Handy Boilerplate
 
-###Graphs
+### Graphs
 ```
 dirs = []
 for x, y in dirs:
@@ -87,7 +87,7 @@ while q:
             q.append
 ```
 
-###Trees
+### Trees
 ```
 .left
 .right
@@ -98,7 +98,7 @@ newQ << .left
 newQ << .right
 ```
 
-###Backtracking
+### Backtracking
 ```
 res = []
 def recurse(curr, idx)
