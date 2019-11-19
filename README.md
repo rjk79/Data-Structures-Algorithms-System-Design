@@ -1,23 +1,25 @@
 ### Python methods
--[[for j in range] for i in range]
--[::][::-1]
--Defaultdict		like Hash.new(0)
--Deque
--Counter.items()
--sorted(    .sort(key=
--reversed(    .reverse
--Find 	rfind()  	like indexOf
--lstrip rstrip
--[*zip(*grid)]
--need star to unpack zip object
--Arrays: del arr[] or remove(val) 
--Sets: .add .discard/.remove to remove 
+- [[for j in range] for i in range]
+- [::][::-1]
+- Defaultdict		like Hash.new(0)
+- Deque
+- Counter.items()
+- sorted(    .sort(key=
+- reversed(    .reverse
+- Find 	rfind()  	like indexOf
+- lstrip rstrip
+- [*zip(*grid)]
+- need star to unpack zip object
+- Arrays: del arr[] or remove(val) 
+- Sets: .add .discard/.remove to remove 
 
 ### Dynamic Programming
--minChange
+- 2D array for X vs. Y "graph"
+- Probability
+- minChange
 
 ### Sorts and Searches
--Iterative B-search
+- Iterative B-search
 ```
         lo, hi = 0, len() 
         while(lo < hi) {
@@ -32,22 +34,22 @@
         return lo;
 ```
 ### Trees and Graphs
--BFS, DFS
--Graph - BFS
--X, y
--Dirs = 
--Xi, yj if in bounds
--Topo Sort
+- BFS, DFS
+- Graph - BFS
+- X, y
+- Dirs = 
+- Xi, yj if in bounds
+- Topo Sort
 
 ### Strings and Arrays
--Kadane’s - largest contig sum in arr
--Rabin Karp - hashing to find pattern in string
--Two pointers
--Slow and Fast pointer
+- Kadane’s - largest contig sum in arr
+- Rabin Karp - hashing to find pattern in string
+- Two pointers
+- Slow and Fast pointer
 
 ### Pathing
--Bellman-Ford
--Dijkstra’s
+- Bellman-Ford
+- Dijkstra’s
 (source is “a”)
 ```
     distances = {a: 0, b: ∞, c: ∞, d: ∞
@@ -59,13 +61,18 @@
             If best distance to neighbor is greater than best distance to current + dist from curr to neighbor, then change best to that
 ```
 ### Bit manipulation
--^ finds rightmost 1, finds the one duplicate el
-+ -
+- ^ finds rightmost 1, finds the one duplicate el
+- << multiply by 2
 
 
 ### Self-balancing Trees
--AVL
--Black Red Trees
+- AVL
+- Black Red Trees
+
+### Other Data Structures / Algorithms
+- Union Find
+- Topological Sort
+- Reservoir Sampling
 
 ## Handy Boilerplate
 
@@ -111,3 +118,22 @@ recurse([], 0)
 ```
 -.isdigit
 -.isalpha
+
+### C++ Notes
+- cout << "Hi"
+- true false
+- if () {} else if () {}
+- while () { }
+- for (int i; i < 10; i ++) {}
+- int arr[5]
+- int arr[5][4]
+- vector <int> a (5) 
+- vector <int> a [5] = creates array of 5 vectors 
+- .resize() then .push_back() adds to back
+- 2D vector ==>> vector < vector <int> > (need the space so that it doesnt do the ">>" operator )
+- pass vectors by reference into funcs int func(vector<int>& vect)
+- .push_back()
+- .pop_back()
+- (&) can retrieve memory address
+- (*) can store memory address
+- void myFunc(string a) { }
