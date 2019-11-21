@@ -92,15 +92,22 @@ roots = [i for i in range(len(edges))]
 def find(key):
     while key != roots[key]
         key = roots[key]
+        
 for edge in edges:
     root1 = find(edge[0])
     root2 = find(edge[1])
-    roots[root1] = root2
+    if root1 != root2:
+        roots[root1] = root2
+        //logic for being in same group
+    else:
+       //logic for being in diff group
 ```
 - Topological Sort
+  - for Directed Acyclic graphs
   - orders are not the only "right" answer
   - when you've explored all prereqs/predecessors, then add it to "order"
   - DFS method (recursive calls) or BFS (Queue)
+  - need to sometimes check for cycles too
 ```
     prereqs = {
         : []
@@ -108,13 +115,20 @@ for edge in edges:
 
     order = []
 
-    def dfs(node, visited):
+    visited = {}
+
+    def dfs(node):
         visited.add(node)
         for neigh in neighbor:
-            if not in visited: dfs(neigh, visited)
+            if not in visited: dfs(neigh)
         order.append(node)
 
-    dfs(el with no prereqs)
+    for node in numNodes:
+        if node not in visited:
+            dfs(node)
+
+    return order[::-1]
+
 ```
 - Reservoir Sampling
 
@@ -160,8 +174,8 @@ def recurse(curr, idx)
     .pop
 recurse([], 0)
 ```
-- .isdigit
-- .isalpha
+- .isdigit()
+- .isalpha()
 
 ### C++ Notes
 - cout << "Hi"
