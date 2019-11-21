@@ -12,6 +12,10 @@
 - need star to unpack zip object
 - Arrays: del arr[] or remove(val) 
 - Sets: .add .discard/.remove to remove 
+- range is a lazy iterable like iterators but range is not an iterator
+  - iterators
+- bisect.bisect(iterable, target) does BS but returns idx + 1 so do - 1 after
+  - can also find where to insert a target
 
 ### Dynamic Programming
 - 2D array for X vs. Y "graph"
@@ -71,7 +75,24 @@
 
 ### Other Data Structures / Algorithms
 - Union Find
+  - keep finding a deeper root until the root matches the node
+```
+roots = [i for i in range(len(edges))]
+
+def find(key):
+    while key != roots[key]
+        key = roots[key]
+for edge in edges:
+    root1 = find(edge[0])
+    root2 = find(edge[1])
+    roots[root1] = root2
+```
 - Topological Sort
+  - when you've explored all prereqs/predecessors, then add it to "order"
+  - DFS method (recursive calls) or BFS (Queue)
+```
+    adj_list = []
+```
 - Reservoir Sampling
 
 ## Handy Boilerplate
@@ -116,8 +137,8 @@ def recurse(curr, idx)
     .pop
 recurse([], 0)
 ```
--.isdigit
--.isalpha
+- .isdigit
+- .isalpha
 
 ### C++ Notes
 - cout << "Hi"
@@ -127,13 +148,14 @@ recurse([], 0)
 - for (int i; i < 10; i ++) {}
 - int arr[5]
 - int arr[5][4]
+- use arrays for frequent access and vectors for freq push/pop
 - vector <int> a (5) 
-- vector <int> a [5] = creates array of 5 vectors 
-- .resize() then .push_back() adds to back
-- 2D vector ==>> vector < vector <int> > (need the space so that it doesnt do the ">>" operator )
-- pass vectors by reference into funcs int func(vector<int>& vect)
-- .push_back()
-- .pop_back()
+  - vector <int> a [5] = creates array of 5 vectors 
+  - .resize() then .push_back() adds to back
+  - 2D vector ==>> vector < vector <int> > (need the space so that it doesnt do the ">>" operator )
+  - pass vectors by reference into funcs int func(vector<int>& vect)
+  - .push_back()
+  - .pop_back()
 - (&) can retrieve memory address
 - (*) can store memory address
 - void myFunc(string a) { }
