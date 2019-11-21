@@ -210,3 +210,8 @@ print(a)
 
 
 print ("leetcode"[-5:3])
+
+a = {1, 2, 3}
+a.add(7)
+
+print(a)

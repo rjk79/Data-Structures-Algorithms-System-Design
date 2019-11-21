@@ -1,17 +1,27 @@
 ### Python methods
 - [[for j in range] for i in range]
 - [::][::-1]
-- Defaultdict		like Hash.new(0)
-- Deque
-- Counter.items()
+- collections
+  - Defaultdict		like Hash.new(0)
+  - Deque
+  - Counter.items()
+- itertools
+  - list(combinations(arr, #))
+  - list(permutations(arr, #))
 - sorted(    .sort(key=
 - reversed(    .reverse
 - Find 	rfind()  	like indexOf
 - lstrip rstrip
 - [*zip(*grid)]
 - need star to unpack zip object
-- Arrays: del arr[] or remove(val) 
-- Sets: .add .discard/.remove to remove 
+- Arrays: 
+  - del arr[] 
+  - remove(val) 
+  - insert(idx, val)
+
+- Sets: 
+  - .add 
+  - .discard/.remove to remove 
 - range is a lazy iterable like iterators but range is not an iterator
   - iterators
 - bisect.bisect(iterable, target) does BS but returns idx + 1 so do - 1 after
@@ -88,10 +98,23 @@ for edge in edges:
     roots[root1] = root2
 ```
 - Topological Sort
+  - orders are not the only "right" answer
   - when you've explored all prereqs/predecessors, then add it to "order"
   - DFS method (recursive calls) or BFS (Queue)
 ```
-    adj_list = []
+    prereqs = {
+        : []
+    }
+
+    order = []
+
+    def dfs(node, visited):
+        visited.add(node)
+        for neigh in neighbor:
+            if not in visited: dfs(neigh, visited)
+        order.append(node)
+
+    dfs(el with no prereqs)
 ```
 - Reservoir Sampling
 
