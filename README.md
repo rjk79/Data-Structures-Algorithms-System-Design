@@ -1,31 +1,4 @@
-### Python methods
-- [[for j in range] for i in range]
-- [::][::-1]
-- collections
-  - Defaultdict		like Hash.new(0)
-  - Deque
-  - Counter.items()
-- itertools
-  - list(combinations(arr, #))
-  - list(permutations(arr, #))
-- sorted(    .sort(key=
-- reversed(    .reverse
-- Find 	rfind()  	like indexOf
-- lstrip rstrip
-- [*zip(*grid)]
-- need star to unpack zip object
-- Arrays: 
-  - del arr[] 
-  - remove(val) 
-  - insert(idx, val)
-
-- Sets: 
-  - .add 
-  - .discard/.remove to remove 
-- range is a lazy iterable like iterators but range is not an iterator
-  - iterators
-- bisect.bisect(iterable, target) does BS but returns idx + 1 so do - 1 after
-  - can also find where to insert a target
+# Data Structures and Algorithms
 
 ### Dynamic Programming
 - 2D array for X vs. Y "graph"
@@ -60,6 +33,23 @@
 - Rabin Karp - hashing to find pattern in string
 - Two pointers
 - Slow and Fast pointer
+- Moving Window
+```
+counts = { } //usually a hash of element frequencies in window
+currCount //some constraint on window
+bestLength = 0
+start = 0
+for end in range(len(string)):
+    currCount += function(input[end]) //el at end contributes to currCount
+
+    if : //if window does not satisfy:
+    currCount -= function(input[start]) //el at start is no longer being considered
+    start += 1
+
+    bestLength = max(bestLength, end - start + 1) //update bestLength
+      
+return bestLength
+```
 
 ### Pathing
 - Bellman-Ford
@@ -92,7 +82,7 @@ roots = [i for i in range(len(edges))]
 def find(key):
     while key != roots[key]
         key = roots[key]
-        
+
 for edge in edges:
     root1 = find(edge[0])
     root2 = find(edge[1])
@@ -176,6 +166,36 @@ recurse([], 0)
 ```
 - .isdigit()
 - .isalpha()
+
+### Python methods
+- [[for j in range] for i in range]
+- [::][::-1]
+- collections
+  - Defaultdict		like Hash.new(0)
+  - Deque
+  - Counter.items()
+- itertools
+  - list(combinations(arr, #))
+  - list(permutations(arr, #))
+- sorted(    .sort(key=
+- reversed(    .reverse
+- Find 	rfind()  	like indexOf
+- lstrip rstrip
+- [*zip(*grid)]
+- need star to unpack zip object
+- Arrays: 
+  - del arr[] 
+  - remove(val) 
+  - insert(idx, val)
+
+- Sets: 
+  - .add 
+  - .discard/.remove to remove 
+- range is a lazy iterable like iterators but range is not an iterator
+  - iterators
+- bisect.bisect(iterable, target) does BS but returns idx + 1 so do - 1 after
+  - can also find where to insert a target
+
 
 ### C++ Notes
 - cout << "Hi"
