@@ -42,7 +42,7 @@ start = 0
 for end in range(len(string)):
     currCount += function(input[end]) //el at end contributes to currCount
 
-    if : //if window does not satisfy:
+    if : //if window does not satisfy (e.g end - start - 1 > constraint or currCount > constraint):
     currCount -= function(input[start]) //el at start is no longer being considered
     start += 1
 
