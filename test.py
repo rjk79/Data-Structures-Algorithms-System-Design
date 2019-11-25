@@ -215,3 +215,13 @@ a = {1, 2, 3}
 a.add(7)
 
 print(a)
+
+# doesnt touch 0
+# range has step of -1
+for i in range(4, 0, -1):
+    print(i)
+
+# flatten map each thing to itself or the rec if its an array
+a = [[1, 2, 3], [4, 5, 6]]
+for sub in a:
+    

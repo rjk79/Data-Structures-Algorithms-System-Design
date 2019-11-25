@@ -187,6 +187,8 @@ recurse([], 0)
   - del arr[] 
   - remove(val) 
   - insert(idx, val)
+- range(start, end, step)
+- sum(2darray, []) will flatten it
 
 - Sets: 
   - .add 
