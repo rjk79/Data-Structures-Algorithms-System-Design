@@ -13,7 +13,7 @@ def colorMe(root, n, x):
 
     recurse(root)
     canWin = n // 2 < max(max(c), n - sum(c))
-    print(c)
+    # print(c)
     return canWin
 
 class TreeNode:

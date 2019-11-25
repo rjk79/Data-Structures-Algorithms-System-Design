@@ -1,5 +1,6 @@
 def alienOrder(words):
 
+
 # Given the following words in dictionary,
 # [
 #   "wrt",
