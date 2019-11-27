@@ -197,6 +197,7 @@ recurse([], 0)
   - iterators
 - bisect.bisect(iterable, target) does BS but returns idx + 1 so do - 1 after
   - can also find where to insert a target
+- random.random()*3//1  (0, 1, 2)
 
 
 ### C++ Notes
