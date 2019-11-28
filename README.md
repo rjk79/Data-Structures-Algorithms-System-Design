@@ -8,24 +8,29 @@
 ### Sorts and Searches
 - Iterative B-search
 ```
-        lo, hi = 0, len() 
-        while(lo < hi) {
-        int mid = lo + (hi - lo) / 2;
-        if(Special condition passed)(optional):
-            return mid; 
-        if(condition passed)
-        hi = mid;
-        else 
-        lo = mid + 1;
-        }
-        return lo;
+    lo, hi = 0, len() 
+    while(lo < hi) {
+    int mid = lo + (hi - lo) / 2;
+    if(Special condition passed)(optional):
+        return mid; 
+    if(condition passed)
+    hi = mid;
+    else 
+    lo = mid + 1;
+    }
+    return lo;
 ```
 ### Trees and Graphs
 - BFS, DFS
 - Graph - BFS
-- X, y
-- Dirs = 
-- Xi, yj if in bounds
+  - don't use [-1] for ranges (will mess up when combined with dirs)
+```
+i, j
+                    //mark as visited
+dirs = 
+for x, y in dirs:
+    xi, yj =       // if in bounds
+```
 - Topo Sort
 
 ### Strings and Arrays
@@ -40,13 +45,13 @@ currCount //some constraint on window
 bestLength = 0
 start = 0
 for end in range(len(string)):
-    currCount += function(input[end]) //el at end contributes to currCount
+    currCount += function(input[end])               //el at end contributes to currCount
 
-    if : //if window does not satisfy (e.g end - start - 1 > constraint or currCount > constraint):
-    currCount -= function(input[start]) //el at start is no longer being considered
+    if :                                //if window does not satisfy (e.g end - start - 1 > constraint or currCount > constraint):
+    currCount -= function(input[start])                 //el at start is no longer being considered
     start += 1
 
-    bestLength = max(bestLength, end - start + 1) //update bestLength
+    bestLength = max(bestLength, end - start + 1)           //update bestLength
       
 return bestLength
 ```
@@ -154,6 +159,14 @@ newQ << .right
 ```
 
 ### Backtracking
+- can mutate outer res using 
+  - [] assignment
+  - .append
+- can change curr using:
+  - curr + [ ]
+  - curr.append  curr.pop
+- copy.deepcopy(arr) 
+
 ```
 res = []
 def recurse(curr, idx)
@@ -174,21 +187,22 @@ recurse([], 0)
   - Defaultdict		like Hash.new(0)
   - Deque
   - Counter.items()
-- itertools
-  - list(combinations(arr, #))
-  - list(permutations(arr, #))
+- Combinations / Permutations
+  - list(itertools.combinations(arr, #)) [(), ()]
+  - list(itertools.permutations(arr, #)) [(), ()]
 - sorted(    .sort(key=
 - reversed(    .reverse
 - Find 	rfind()  	like indexOf
 - lstrip rstrip
 - [*zip(*grid)]
-- need star to unpack zip object
+  - need star to unpack zip object
 - Arrays: 
   - del arr[] 
   - remove(val) 
   - insert(idx, val)
 - range(start, end, step)
 - sum(2darray, []) will flatten it
+- 
 
 - Sets: 
   - .add 

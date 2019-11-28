@@ -189,21 +189,6 @@ while curr:
 # print(slow.val) 
 # print(fast.val)
 
-def binarySearch(arr, target):
-    l = 0
-    r = len(arr) 
-    while l < r:
-        mid = (r + l) //2
-        if arr[mid] == target: return mid
-        elif arr[mid] < target:
-            l = mid + 1
-        elif arr[mid] > target:
-            r = mid
-    return -1
-
-print("BSing")
-print(binarySearch([1, 4, 5, 6, 8, 10], 5))
-print(binarySearch([1, 4, 5, 6, 8, 10], 11))
 
 a = [[None for _ in range(5)] for _ in range(3)]
 print(a)
@@ -223,5 +208,30 @@ for i in range(4, 0, -1):
 
 # flatten map each thing to itself or the rec if its an array
 a = [[1, 2, 3], [4, 5, 6]]
-for sub in a:
-    
+
+
+
+
+def binarySearch(arr, target):
+    l = 0
+    r = len(arr) 
+    while l < r:
+        mid = (r + l) //2
+        if arr[mid] == target: return mid
+        elif arr[mid] < target:
+            l = mid + 1
+        elif arr[mid] > target:
+            r = mid
+    return -1
+
+print("BSing")
+print(binarySearch([1, 4, 5, 6, 8, 10], 1))
+print(binarySearch([1, 4, 5, 6, 8, 10], 4))
+print(binarySearch([1, 4, 5, 6, 8, 10], 5))
+print(binarySearch([1, 4, 5, 6, 8, 10], 6))
+print(binarySearch([1, 4, 5, 6, 8, 10], 8))
+print(binarySearch([1, 4, 5, 6, 8, 10], 10))
+print(binarySearch([1, 4, 5, 6, 8, 10], 0))
+print(binarySearch([1, 4, 5, 6, 8, 10], 11))
+
+
