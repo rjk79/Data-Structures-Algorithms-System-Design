@@ -157,6 +157,26 @@ newQ = []
 newQ << .left
 newQ << .right
 ```
+```
+class TrieNode:
+    def __init__(self):
+        self.children = collections.defaultdict(TrieNode)
+        self.isWord = False
+def Trie:
+    def __init__(self):
+        self.root = TrieNode()
+    def insert(self, word):
+        root = self.root
+        for c in word:
+            root = root.children[c]
+        root.isWord = True
+    def search(self, word):
+        root = self.root
+        for c in word:
+            root = root.children.get(c)
+            if not root: return False
+        return root.isWord
+```
 
 ### Backtracking
 - can mutate outer res using 
@@ -182,7 +202,9 @@ recurse([], 0)
 
 ### Python methods
 - [[for j in range] for i in range]
-- [::][::-1]
+- array iterating backwards
+  - [::][::-1]
+  - [-1:0:-1]  (starts at [-1], doesnt touch [0]) (awkward...)
 - collections
   - Defaultdict		like Hash.new(0)
   - Deque
@@ -193,13 +215,18 @@ recurse([], 0)
 - sorted(    .sort(key=
 - reversed(    .reverse
 - Find 	rfind()  	like indexOf
-- lstrip rstrip
+- Strings
+  - lstrip rstrip
+  - startswith() endswith()
 - [*zip(*grid)]
   - need star to unpack zip object
 - Arrays: 
   - del arr[] 
   - remove(val) 
   - insert(idx, val)
+- Sets:
+  - declared with { }
+  - set1.union(set2) set1.intersection(set2)
 - range(start, end, step)
 - sum(2darray, []) will flatten it
 - 
