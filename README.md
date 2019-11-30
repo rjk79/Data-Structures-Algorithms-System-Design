@@ -58,13 +58,24 @@ return bestLength
 
 ### Pathing
 - Bellman-Ford
-- Dijkstra’s
+- Dijkstra’s 
+  - finds shortest distance to every node
+  - visit all nodes once
+    - for each node, check dist for all neighbors
 (source is “a”)
 ```
-    distances = {a: 0, b: ∞, c: ∞, d: ∞
-    unvisited (a, b, c, d,
+    graph = {
+        a: {
+            b: 1
+            c: 2
+        }
+        b: {}
+        c: {}
+    }
+    dists = {a: 0, b: ∞, c: ∞, d: ∞
+    unvisited = (a, b, c, d,
     while unvisited.length:
-        Find the closest, unvisited node 
+        Find the closest (to orig src), unvisited node 
         Remove from unvisited
         For all neighbors
             If best distance to neighbor is greater than best distance to current + dist from curr to neighbor, then change best to that
@@ -160,15 +171,15 @@ newQ << .right
 ```
 class TrieNode:
     def __init__(self):
-        self.children = collections.defaultdict(TrieNode)
+        self.children = collections.defaultdict(TrieNode)   # makes itself
         self.isWord = False
 def Trie:
     def __init__(self):
-        self.root = TrieNode()
+        self.root = TrieNode()  #abstracts away TrieNode
     def insert(self, word):
         root = self.root
         for c in word:
-            root = root.children[c]
+            root = root.children[c]  #creates the child if not there
         root.isWord = True
     def search(self, word):
         root = self.root
