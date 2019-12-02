@@ -81,8 +81,15 @@ return bestLength
             If best distance to neighbor is greater than best distance to current + dist from curr to neighbor, then change best to that
 ```
 ### Bit manipulation
-- ^ finds rightmost 1, finds the one duplicate el
-- << multiply by 2
+- & | ~
+- ^ 
+  - finds rightmost 1
+  - finds the one duplicate el
+- << >>   multiply by 2
+- change / check / clear a specific bit
+  - shift a "1" over X times
+  - maybe ~ it
+  - & or | it with your number
 
 
 ### Self-balancing Trees
