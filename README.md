@@ -100,6 +100,12 @@ return bestLength
 - Union Find
   - keep finding a deeper root until the root matches the node
 ```
+input: 
+edges = [[0, 1], [1, 2], [2, 3], [3, 4]]               // list of undirected edges
+n  = 5
+
+n = 5 and edges = [[0, 1], [1, 2], [3, 4]]
+
 roots = [i for i in range(len(edges))]
 
 def find(key):
@@ -122,6 +128,9 @@ for edge in edges:
   - DFS method (recursive calls) or BFS (Queue)
   - need to sometimes check for cycles too
 ```
+    input:
+    words(sorted) = {"baa", "abcd", "abca", "cab", "cad"}
+
     prereqs = {
         : []
     }
@@ -258,23 +267,3 @@ recurse([], 0)
   - can also find where to insert a target
 - random.random()*3//1  (0, 1, 2)
 
-
-### C++ Notes
-- cout << "Hi"
-- true false
-- if () {} else if () {}
-- while () { }
-- for (int i; i < 10; i ++) {}
-- int arr[5]
-- int arr[5][4]
-- use arrays for frequent access and vectors for freq push/pop
-- vector <int> a (5) 
-  - vector <int> a [5] = creates array of 5 vectors 
-  - .resize() then .push_back() adds to back
-  - 2D vector ==>> vector < vector <int> > (need the space so that it doesnt do the ">>" operator )
-  - pass vectors by reference into funcs int func(vector<int>& vect)
-  - .push_back()
-  - .pop_back()
-- (&) can retrieve memory address
-- (*) can store memory address
-- void myFunc(string a) { }
