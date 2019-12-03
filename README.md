@@ -20,19 +20,73 @@
     }
     return lo;
 ```
-### Trees and Graphs
+### Graphs
 - BFS, DFS
 - Graph - BFS
   - don't use [-1] for ranges (will mess up when combined with dirs)
 ```
-i, j
-                    //mark as visited
-dirs = 
+dirs = []
 for x, y in dirs:
-    xi, yj =       // if in bounds
+    xi, yj
+    if 0 <= xi < len and 0 <= yj < len
 ```
+```
+visited = set()
+q = []
+while q:
+    q.pop
+    visited.add
+    for neighbor in .neighbors:
+        if not in visited:
+            q.append
+```
+
 - Topo Sort
 
+### Trees
+- Traversals
+- DFS
+```
+.left
+.right
+```
+- BFS
+```
+q = []
+newQ = []
+newQ << .left
+newQ << .right
+```
+- Level Order
+- Tries
+```
+class TrieNode:
+    def __init__(self):
+        self.children = collections.defaultdict(TrieNode)   # makes itself
+        self.isWord = False
+def Trie:
+    def __init__(self):
+        self.root = TrieNode()  #abstracts away TrieNode
+    def insert(self, word):
+        root = self.root
+        for c in word:
+            root = root.children[c]  #creates the child if not there
+        root.isWord = True
+    def search(self, word):
+        root = self.root
+        for c in word:
+            root = root.children.get(c)
+            if not root: return False
+        return root.isWord
+```
+
+- Heaps
+  - heapq.heappush(arr, el)
+  - heapq.heappop(arr)
+  - sorts ASC by [0] so [0][0] is the smallest val it sees
+  - insert and delete are O(logn)
+  - creating a heap is NOT O(nlogn) even though it's n els * logn insert time...
+    - time is amortized to O(n)
 ### Strings and Arrays
 - ord() and chr()
 - Kadane’s - largest contig sum in arr
@@ -180,63 +234,6 @@ for edge in edges:
 
 ```
 - Reservoir Sampling
-
-## Handy Boilerplate
-
-### Graphs
-```
-dirs = []
-for x, y in dirs:
-    xi, yj
-    if 0 <= xi < len and 0 <= yj < len
-```
-```
-visited = set()
-q = []
-while q:
-    q.pop
-    visited.add
-    for neighbor in .neighbors:
-        if not in visited:
-            q.append
-```
-
-### Trees
-- Traversals
-- DFS
-```
-.left
-.right
-```
-- BFS
-```
-q = []
-newQ = []
-newQ << .left
-newQ << .right
-```
-- Level Order
-- Tries
-```
-class TrieNode:
-    def __init__(self):
-        self.children = collections.defaultdict(TrieNode)   # makes itself
-        self.isWord = False
-def Trie:
-    def __init__(self):
-        self.root = TrieNode()  #abstracts away TrieNode
-    def insert(self, word):
-        root = self.root
-        for c in word:
-            root = root.children[c]  #creates the child if not there
-        root.isWord = True
-    def search(self, word):
-        root = self.root
-        for c in word:
-            root = root.children.get(c)
-            if not root: return False
-        return root.isWord
-```
 
 ### Backtracking
 - can mutate outer res using 
