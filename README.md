@@ -77,6 +77,10 @@ return bestLength
             merged.append(intervals[i])
     return merged
 ```
+- isOverlap?
+  - start1 < end2 and start2 > end1
+- Overlap area
+  - max(start1, start2) - min(end1, end2)
 ### Pathing
 - Bellman-Ford
 - Dijkstra’s 
@@ -198,15 +202,21 @@ while q:
 ```
 
 ### Trees
+- Traversals
+- DFS
 ```
 .left
 .right
-
+```
+- BFS
+```
 q = []
 newQ = []
 newQ << .left
 newQ << .right
 ```
+- Level Order
+- Tries
 ```
 class TrieNode:
     def __init__(self):
