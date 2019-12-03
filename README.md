@@ -34,6 +34,7 @@ for x, y in dirs:
 - Topo Sort
 
 ### Strings and Arrays
+- ord() and chr()
 - Kadane’s - largest contig sum in arr
 - Rabin Karp - hashing to find pattern in string
 - Two pointers
@@ -55,7 +56,27 @@ for end in range(len(string)):
       
 return bestLength
 ```
-
+### Intervals
+- Inserting
+  - map based on start, [0], sort, bisect.bisect(arr, newInterval[0]), then .insert
+```
+    starts = [interval[0] for interval in intervals] 
+    starts.sort()
+    idx = bisect.bisect(starts, newInterval[0])
+    intervals.insert(idx, newInterval)
+```
+- Merging
+  - if [i][1] > [i + 1][0] then set [i][1] to max([i][1], [i + 1][1])
+  if current's end is GREATER than next's start, then set currs end to the GREATER end
+```
+    merged = [intervals[0]]        //seed it with the 1st interval
+    for i in range(1, len(intervals)):
+        if merged[-1][1] >= intervals[i][0]:
+            merged[-1][1] = max(merged[-1][1], intervals[i][1])
+        else:
+            merged.append(intervals[i])
+    return merged
+```
 ### Pathing
 - Bellman-Ford
 - Dijkstra’s 
@@ -90,6 +111,8 @@ return bestLength
   - shift a "1" over X times
   - maybe ~ it
   - & or | it with your number
+- bin() to convert to bin
+- int(<binary string>, 2) to convert back to int
 
 
 ### Self-balancing Trees
@@ -228,6 +251,7 @@ recurse([], 0)
 - .isalpha()
 
 ### Python methods
+- .insert(index, el)
 - [[for j in range] for i in range]
 - array iterating backwards
   - [::][::-1]
@@ -256,7 +280,7 @@ recurse([], 0)
   - set1.union(set2) set1.intersection(set2)
 - range(start, end, step)
 - sum(2darray, []) will flatten it
-- 
+- Memoizing: @functools.lru_cache(None)
 
 - Sets: 
   - .add 
