@@ -151,30 +151,59 @@ return bestLength
     - for each node, check dist for all neighbors
 (source is “a”)
 ```
-    
-    dists = {
-        a: {
-            b: 1
-            c: 2
-        }
-        b: {}
-        c: {}
-    }
+    //dists = {a: {
+                    b: 1
+                    c: 2}
+                b: {}
+                c: {}
+                }
+    dists = collections.defaultdict(dict)        
     best = {a: 0, b: ∞, c: ∞, d: ∞
     unvisited = (a, b, c, d,
 
     def closestUnvisited(curr):
-        best = None
+        res = None
         for neigh in dists[curr]:
-            if not best or (neigh in unvisited and dists[curr][neigh] < best):
-                best = neigh
-        return best
+            if not res or (neigh in unvisited and best[neigh] < best[res]):
+                res = neigh
+        return res
     while unvisited.length: 
         curr = closestUnvisited(curr)            //Find the closest (to orig src), unvisited node 
         unvisited.remove(curr)                        //Remove from unvisited
         for neigh in dists[curr]:
-            best[neigh] = max(best[neigh], best[curr] + dists[curr][neigh] )      //If best distance to neighbor is greater than best distance to current + dist                                                                         from curr to neighbor, then change best to that
-    return best                        
+            best[neigh] = min(best[neigh], best[curr] + dists[curr][neigh] )      //If best distance to neighbor is greater than best distance to current + dist                                                                         from curr to neighbor, then change best to that
+    return best  
+
+        def findClosest(self, best, visited):
+        res = None
+        for node in best:
+            if node not in visited and (not res or best[node] < best[res]):
+                res = node
+        return res
+
+                                                    // K = starting node, N = # of nodes
+                                                    // all nodes receive signal
+        graph = collections.defaultdict(dict)
+        for edge in edges:
+            graph[edge[0]][edge[1]] = edge[2]       //graph[src][dest] = edge
+  
+        best = dict()           // {a: 2, b: 3}
+        for i in range(1, N + 1):
+            best[i] = float('inf')
+        best[K] = 0
+        
+        visited = set()
+        
+        for _ in range(N): 
+            closest = self.findClosest(best, visited)
+            visited.add(closest)
+            for neighbor in graph[closest]:
+                best[neighbor] = min(best[closest] + graph[closest][neighbor], best[neighbor])    // src to curr + curr to neigh
+
+        for val in best.values():       //check if we can reach everything
+            if val == float('inf'): return -1
+         
+        return          //some value in best                      
 ```
 - Bellman-Ford - one node to others
 - Floyd-Warshall - short dist poss between all pairs of nodes
@@ -200,7 +229,7 @@ return bestLength
 - Black Red Trees
 
 ### Other Data Structures / Algorithms
-- Union Find
+- Union Find (num of connected components)
   - keep finding a deeper root until the root matches the node
 ```
 input: 
@@ -224,7 +253,7 @@ for edge in edges:
     else:
        //logic for being in diff group
 ```
-- Topological Sort
+- Topological Sort (alien dic)
   - for Directed Acyclic graphs
   - orders are not the only "right" answer
   - when you've explored all prereqs/predecessors, then add it to "order"
@@ -298,7 +327,7 @@ recurse([], 0)
 - Strings
   - lstrip rstrip
   - startswith() endswith()
-- [*zip(*grid)]
+- [*zip(*grid)]   starboard!
   - need star to unpack zip object
 - Arrays: 
   - del arr[] 
