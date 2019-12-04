@@ -9,6 +9,7 @@
 - Memoizing: @functools.lru_cache(None)     (not dp, only similar)
 
 ### Sorts and Searches
+- Quicksort - worst case O(n^2)
 - Iterative B-search
 ```
     lo, hi = 0, len() 
@@ -177,7 +178,7 @@ return bestLength
             for neighbor in graph[closest]:
                 best[neighbor] = min(best[closest] + graph[closest][neighbor], best[neighbor])    // src to curr + curr to neigh
 
-        for val in best.values():       //check if we can reach everything
+        for val in best.values():       //check if we can reach every other node
             if val == float('inf'): return -1
          
         return          //some value in best                      
