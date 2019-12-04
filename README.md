@@ -30,6 +30,10 @@
 - random.random()*3//1  (0, 1, 2)
 
 ### Graphs
+- Tradeoffs
+  - Adjacency matrix
+  - graph
+  - Class
 - BFS, DFS
 - Graph - BFS
   - don't use [-1] for ranges (will mess up when combined with dirs)

@@ -65,19 +65,28 @@ leftRes = [2, 3]
   4
  /
 3
-
+# passes itself up via [1]
+# passes child up via [0]
 
 2, 2
-res = [2, 3]
-rightRes = [None, 3] #3 passes thru via [1]
+res = [2, 3]   
+rightRes = [None, 3] 
+# OPPOSITE passing:
+# child, 3, passes thru via [1]
+# passes itself up via [0]
+                
 2
  \
 None
 
 
 3, 2
-res = [None, 3]  #None passes thru via [0]
-leftRes = [None, None]
+res = [None, 3] 
+# passes itself up via [1]
+# left child, None, passes thru via [0]
+# if 3 had a .left like 2.5 it still wouldnt be passed via res
+# b/c it'd ret [None, 2.5] and this curr call only reads [0]
+leftRes = [None, None] 
 root.left = None
    3
   /
