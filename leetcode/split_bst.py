@@ -13,6 +13,11 @@
 #       3      6      and    2
 #             / \           /
 #            5   7         1
+
+# Solution:
+# at target we only want to pass up self (root of new subtree) and R
+# at target's parent we want to pass up self (old subtree) and L (new subtree)
+
 class TreeNode:
     def __init__(self, val):
         self.val = val
@@ -59,7 +64,17 @@ preorder(answer[0])
 print("---------")
 preorder(answer[1])
 
-4, 2
+# if we need to go up further to right, [1] will be updated
+#                             to left, [0] will be updated but .right will hold old [0]
+# so you'd get:
+#    4         0
+#   / \         \
+#  3   6         2
+#     / \       /
+#    5   7     1
+
+# every node passes itself up and child
+4
 res = [2, 4] ->
 leftRes = [2, 3]
   4
@@ -68,7 +83,7 @@ leftRes = [2, 3]
 # passes itself up via [1]
 # passes child up via [0]
 
-2, 2
+2
 res = [2, 3]   
 rightRes = [None, 3] 
 # OPPOSITE passing:
@@ -80,7 +95,7 @@ rightRes = [None, 3]
 None
 
 
-3, 2
+3
 res = [None, 3] 
 # passes itself up via [1]
 # left child, None, passes thru via [0]

@@ -1,6 +1,6 @@
 # Data Structures and Algorithms
 
-### Dynamic Programming
+### 1. Dynamic Programming
 - Overlapping Subproblems 
 - Optimal Substructure (buying travel tickets)
 - 2D array for X vs. Y "graph"
@@ -8,7 +8,7 @@
 - minChange
 - Memoizing: @functools.lru_cache(None)     (not dp, only similar)
 
-### Sorts and Searches
+### 2. Sorts and Searches
 - Quicksort - worst case O(n^2)
 - Iterative B-search
 ```
@@ -29,7 +29,10 @@
 - Reservoir Sampling
 - random.random()*3//1  (0, 1, 2)
 
-### Graphs
+### 3. Graphs
+- visited
+  - separate 2D array 
+  - visited = set() .add(str([xi, yj]))
 - Tradeoffs
   - Adjacency matrix
   - graph
@@ -54,9 +57,9 @@ while q:
             q.append
 ```
 
-- Topo Sort
 
-### Trees
+### 4. Trees
+- acyclic graphs
 - Traversals
 - DFS
 ```
@@ -100,10 +103,16 @@ class Trie:
   - insert and delete are O(logn)
   - creating a heap is NOT O(nlogn) even though it's n els * logn insert time...
     - time is amortized to O(n)
-### Strings and Arrays
+- Self-balancing Trees
+  - AVL
+  - Black Red Trees
+### 5. Strings and Arrays
 - ord() and chr()
-- Kadane’s - largest contig sum in arr
+- Kadane’s - largest contig sum in subarr
 - Rabin Karp - hashing to find pattern in string
+  - turn curr window into hash (integer. e.g 234)
+  - convert when window slides (e.g. 345)
+  - if currWindow hash == target hash, then compare actual chars
 - Two pointers
 - Slow and Fast pointer
 - Moving Window
@@ -123,7 +132,7 @@ for end in range(len(string)):
       
 return bestLength
 ```
-### Intervals
+### 6. Intervals
 - Inserting
   - map based on start, [0], sort, bisect.bisect(arr, newInterval[0]), then .insert
 ```
@@ -148,7 +157,7 @@ return bestLength
   - start1 < end2 and start2 > end1
 - Overlap area
   - max(start1, start2) - min(end1, end2)
-### Pathing
+### 7. Pathing
 
 - Dijkstra’s 
   - finds shortest distance to every node
@@ -189,10 +198,11 @@ return bestLength
 ```
 - Bellman-Ford - one node to others
 - Floyd-Warshall - short dist poss between all pairs of nodes
+  - n^3
 - Minimum Spanning Trees 
   - Kruskal - sort edges, keep adding smallest edge (not nec contiguous) that would connect trees
-  - Prim - choose random node, keep choosing smallest avail edge that would add an unvisited node
-### Bit manipulation
+  - Prim - choose random node, keep choosing smallest accessible edge that would add an unvisited node
+### 8. Bit manipulation
 - & | ~
 - ^ 
   - finds rightmost 1
@@ -205,12 +215,7 @@ return bestLength
 - bin() to convert to bin
 - int(<binary string>, 2) to convert back to int
 
-
-### Self-balancing Trees
-- AVL
-- Black Red Trees
-
-### Other Data Structures / Algorithms
+### 9. Other Data Structures / Algorithms
 - Union Find (num of connected components)
   - keep finding a deeper root until the root matches the node
 ```
@@ -267,8 +272,7 @@ for edge in edges:
 
 ```
 
-
-### Backtracking
+### 10. Backtracking
 - can mutate outer res using 
   - [] assignment
   - .append
