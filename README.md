@@ -1,9 +1,12 @@
 # Data Structures and Algorithms
 
 ### Dynamic Programming
+- Overlapping Subproblems 
+- Optimal Substructure (buying travel tickets)
 - 2D array for X vs. Y "graph"
 - Probability
 - minChange
+- Memoizing: @functools.lru_cache(None)     (not dp, only similar)
 
 ### Sorts and Searches
 - Iterative B-search
@@ -20,6 +23,11 @@
     }
     return lo;
 ```
+- bisect.bisect(iterable, target) does BS but returns idx + 1 so do - 1 after
+  - can also find where to insert a target
+- Reservoir Sampling
+- random.random()*3//1  (0, 1, 2)
+
 ### Graphs
 - BFS, DFS
 - Graph - BFS
@@ -64,7 +72,7 @@ class TrieNode:
     def __init__(self):
         self.children = collections.defaultdict(TrieNode)   # makes itself
         self.isWord = False
-def Trie:
+class Trie:
     def __init__(self):
         self.root = TrieNode()  #abstracts away TrieNode
     def insert(self, word):
@@ -233,7 +241,7 @@ for edge in edges:
     return order[::-1]
 
 ```
-- Reservoir Sampling
+
 
 ### Backtracking
 - can mutate outer res using 
@@ -243,7 +251,9 @@ for edge in edges:
   - curr + [ ]
   - curr.append  curr.pop
 - copy.deepcopy(arr) 
-
+- Combinations / Permutations
+  - list(itertools.combinations(arr, #)) [(), ()]
+  - list(itertools.permutations(arr, #)) [(), ()]
 ```
 res = []
 def recurse(curr, idx)
@@ -267,10 +277,8 @@ recurse([], 0)
   - Defaultdict		like Hash.new(0)
   - Deque
   - Counter.items()
-- Combinations / Permutations
-  - list(itertools.combinations(arr, #)) [(), ()]
-  - list(itertools.permutations(arr, #)) [(), ()]
 - sorted(    .sort(key=
+  - sorts by [0] by default for 2D arrs
 - reversed(    .reverse
 - Find 	rfind()  	like indexOf
 - Strings
@@ -287,14 +295,11 @@ recurse([], 0)
   - set1.union(set2) set1.intersection(set2)
 - range(start, end, step)
 - sum(2darray, []) will flatten it
-- Memoizing: @functools.lru_cache(None)
 
 - Sets: 
   - .add 
   - .discard/.remove to remove 
 - range is a lazy iterable like iterators but range is not an iterator
   - iterators
-- bisect.bisect(iterable, target) does BS but returns idx + 1 so do - 1 after
-  - can also find where to insert a target
-- random.random()*3//1  (0, 1, 2)
+
 
