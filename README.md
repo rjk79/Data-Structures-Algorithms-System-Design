@@ -151,36 +151,13 @@ return bestLength
     - for each node, check dist for all neighbors
 (source is “a”)
 ```
-    //dists = {a: {
-                    b: 1
-                    c: 2}
-                b: {}
-                c: {}
-                }
-    dists = collections.defaultdict(dict)        
-    best = {a: 0, b: ∞, c: ∞, d: ∞
-    unvisited = (a, b, c, d,
 
-    def closestUnvisited(curr):
-        res = None
-        for neigh in dists[curr]:
-            if not res or (neigh in unvisited and best[neigh] < best[res]):
-                res = neigh
-        return res
-    while unvisited.length: 
-        curr = closestUnvisited(curr)            //Find the closest (to orig src), unvisited node 
-        unvisited.remove(curr)                        //Remove from unvisited
-        for neigh in dists[curr]:
-            best[neigh] = min(best[neigh], best[curr] + dists[curr][neigh] )      //If best distance to neighbor is greater than best distance to current + dist                                                                         from curr to neighbor, then change best to that
-    return best  
-
-        def findClosest(self, best, visited):
-        res = None
-        for node in best:
-            if node not in visited and (not res or best[node] < best[res]):
-                res = node
-        return res
-
+        def findClosest(self, best, visited): //Find the closest (to orig src), unvisited node 
+            res = None
+            for node in best:
+                if node not in visited and (not res or best[node] < best[res]):
+                    res = node
+            return res
                                                     // K = starting node, N = # of nodes
                                                     // all nodes receive signal
         graph = collections.defaultdict(dict)
