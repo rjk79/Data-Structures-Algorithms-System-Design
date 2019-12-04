@@ -144,14 +144,15 @@ return bestLength
 - Overlap area
   - max(start1, start2) - min(end1, end2)
 ### Pathing
-- Bellman-Ford
+
 - Dijkstra’s 
   - finds shortest distance to every node
   - visit all nodes once
     - for each node, check dist for all neighbors
 (source is “a”)
 ```
-    graph = {
+    
+    dists = {
         a: {
             b: 1
             c: 2
@@ -159,14 +160,27 @@ return bestLength
         b: {}
         c: {}
     }
-    dists = {a: 0, b: ∞, c: ∞, d: ∞
+    best = {a: 0, b: ∞, c: ∞, d: ∞
     unvisited = (a, b, c, d,
-    while unvisited.length:
-        Find the closest (to orig src), unvisited node 
-        Remove from unvisited
-        For all neighbors
-            If best distance to neighbor is greater than best distance to current + dist from curr to neighbor, then change best to that
+
+    def closestUnvisited(curr):
+        best = None
+        for neigh in dists[curr]:
+            if not best or (neigh in unvisited and dists[curr][neigh] < best):
+                best = neigh
+        return best
+    while unvisited.length: 
+        curr = closestUnvisited(curr)            //Find the closest (to orig src), unvisited node 
+        unvisited.remove(curr)                        //Remove from unvisited
+        for neigh in dists[curr]:
+            best[neigh] = max(best[neigh], best[curr] + dists[curr][neigh] )      //If best distance to neighbor is greater than best distance to current + dist                                                                         from curr to neighbor, then change best to that
+    return best                        
 ```
+- Bellman-Ford - one node to others
+- Floyd-Warshall - short dist poss between all pairs of nodes
+- Minimum Spanning Trees 
+  - Kruskal - sort edges, keep adding smallest edge (not nec contiguous) that would connect trees
+  - Prim - choose random node, keep choosing smallest avail edge that would add an unvisited node
 ### Bit manipulation
 - & | ~
 - ^ 
