@@ -103,16 +103,10 @@ class Trie:
   - insert and delete are O(logn)
   - creating a heap is NOT O(nlogn) even though it's n els * logn insert time...
     - time is amortized to O(n)
-- Self-balancing Trees
-  - AVL
-  - Black Red Trees
+
 ### 5. Strings and Arrays
 - ord() and chr()
 - Kadane’s - largest contig sum in subarr
-- Rabin Karp - hashing to find pattern in string
-  - turn curr window into hash (integer. e.g 234)
-  - convert when window slides (e.g. 345)
-  - if currWindow hash == target hash, then compare actual chars
 - Two pointers
 - Slow and Fast pointer
 - Moving Window
@@ -159,7 +153,7 @@ return bestLength
   - max(start1, start2) - min(end1, end2)
 ### 7. Pathing
 
-- Dijkstra’s 
+- Dijkstra’s (2 dicts and 1 set)
   - finds shortest distance to every node
   - visit all nodes once
     - for each node, check dist for all neighbors
@@ -196,12 +190,7 @@ return bestLength
          
         return          //some value in best                      
 ```
-- Bellman-Ford - one node to others
-- Floyd-Warshall - short dist poss between all pairs of nodes
-  - n^3
-- Minimum Spanning Trees 
-  - Kruskal - sort edges, keep adding smallest edge (not nec contiguous) that would connect trees
-  - Prim - choose random node, keep choosing smallest accessible edge that would add an unvisited node
+
 ### 8. Bit manipulation
 - & | ~
 - ^ 
@@ -295,6 +284,25 @@ recurse([], 0)
 ```
 - .isdigit()
 - .isalpha()
+
+### 11. Extra Knowledge
+- Rabin Karp - hashing to find pattern in string
+  - turn curr window into hash (integer. e.g 234)
+  - convert when window slides (e.g. 345)
+  - if currWindow hash == target hash, then compare actual chars
+- Self-balancing Trees
+  - AVL
+  - Black Red Trees
+- Sieve of Eratosthenes (finding every prime up to n)
+  - check every number up to n 
+  - eliminate every num starting at n^2 and incrementing by n
+  - go to next unelimiminated 
+- Bellman-Ford - one node to others
+- Floyd-Warshall - short dist poss between all pairs of nodes
+  - n^3
+- Minimum Spanning Trees 
+  - Kruskal - sort edges, keep adding smallest edge (not nec contiguous) that would connect trees
+  - Prim - choose random node, keep choosing smallest accessible edge that would add an unvisited node
 
 ### Python methods
 - .insert(index, el)
