@@ -4,20 +4,20 @@
 - signs:
   - Overlapping Subproblems 
   - Optimal Substructure (buying travel tickets)
-- Fibonacci - 1D: since only need prev val and prev-prev val
+1. **Fibonacci** - 1D: since only need prev val and prev-prev val, beginning always directly affects answer
   - Decode Ways 
   - Climbing Stairs
-- 0/1 Knapsack - 2D: since need 2 types of vals: avail items and target val
+2. **0/1 Knapsack** - 2D: since need 2 types of vals: avail items and target val
   - Equal Subset Sum Partition
-- Boundless Knapsack (can repeat items) 1D: since only need to know best val at lower weight
+3. **Boundless Knapsack** (can repeat items) 1D: since only need to know best val at lower weight
   - Coin Change
-- Longest Palindromic Subsequence - 2D: 2 Pointers on 1 arr/str to delin a Window
-- Longest Common Substring - 2 Pointers (1 on each arr/str)
+4. **Longest Palindromic Subsequence** - 2D: 2 Pointers on 1 arr/str to delin a Window
+5. **Longest Common Substring** - 2 Pointers (1 on each arr/str), beginning might not directly affect answer
   - Longest Common Subseq
+  - Longest Increasing Subseq (LIS)
 
 - 2D array for X vs. Y "graph"
 - Probability
-- minChange
 - Memoizing: @functools.lru_cache(None)     (not dp, only similar)
 
 ### 2. Sorts and Searches
