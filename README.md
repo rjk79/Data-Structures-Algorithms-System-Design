@@ -9,12 +9,48 @@
   - Climbing Stairs
 2. **0/1 Knapsack** - 2D: since need 2 types of vals: avail items and target val
   - Equal Subset Sum Partition
+```
+m = len(items)
+n = target
+[[0 for _ in range(n)] for _ in range(m)]
+```
+
 3. **Boundless Knapsack** (can repeat items) 1D: since only need to know best val at lower weight
   - Coin Change
-4. **Longest Palindromic Subsequence** - 2D: 2 Pointers on 1 arr/str to delin a Window
+```
+[0 for _ in range(target)]
+```
+4. **Longest Palindromic Subsequence** - 2D: 2 Pointers on 1 arr/str to delin a Window (Palindrome-specific)
+```
+bbbab
+12345
+                    1 2 3 3 4 <-- res
+                    0 1 2 2 3
+                    0 0 1 1 3
+                    0 0 0 1 1
+                    0 0 0 0 1
+n = len(s)
+dp = [[0 for _ in range(n)] for _ in range(n)] //seed the cells where i == j
+for i in range(n):
+    dp[i][i] = 1
+for size in range(n):           // DIAGONAL traverse
+    for i in range(n - size + 1):
+        j = n - size - 1
+        if s[i] == s[j]
+            dp[i][j] = dp[i-1][j-1] + 2
+        else:
+            // logic for break in palindrome
+            // can resume by using other squares (if doing "subsequences", can use max(L, D, LD))
+return dp[0][-1]
+```
 5. **Longest Common Substring** - 2 Pointers (1 on each arr/str), beginning might not directly affect answer
   - Longest Common Subseq
   - Longest Increasing Subseq (LIS)
+```
+m = len(s1)
+n = len(s2)
+dp = [[0 for _ in range(n)] for _ in range(m)]
+```
 
 - 2D array for X vs. Y "graph"
 - Probability
