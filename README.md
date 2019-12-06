@@ -1,8 +1,20 @@
 # Data Structures and Algorithms
 
 ### 1. Dynamic Programming
-- Overlapping Subproblems 
-- Optimal Substructure (buying travel tickets)
+- signs:
+  - Overlapping Subproblems 
+  - Optimal Substructure (buying travel tickets)
+- Fibonacci - 1D: since only need prev val and prev-prev val
+  - Decode Ways 
+  - Climbing Stairs
+- 0/1 Knapsack - 2D: since need 2 types of vals: avail items and target val
+  - Equal Subset Sum Partition
+- Boundless Knapsack (can repeat items) 1D: since only need to know best val at lower weight
+  - Coin Change
+- Longest Palindromic Subsequence - 2D: 2 Pointers on 1 arr/str to delin a Window
+- Longest Common Substring - 2 Pointers (1 on each arr/str)
+  - Longest Common Subseq
+
 - 2D array for X vs. Y "graph"
 - Probability
 - minChange
