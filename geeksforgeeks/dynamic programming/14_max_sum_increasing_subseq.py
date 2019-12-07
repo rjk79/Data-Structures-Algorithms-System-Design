@@ -23,3 +23,5 @@ def maxSumIS(arr, n):
             max = dp[i] 
   
     return max
+
+    {1, 101, 2, 3, 100, 4, 5}, then output should be 106

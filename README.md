@@ -1,9 +1,17 @@
 # Data Structures and Algorithms
 
 ### 1. Dynamic Programming
-- signs:
+- classify when:
   - Overlapping Subproblems 
   - Optimal Substructure (buying travel tickets)
+- steps: 
+  - write recursive
+    - reduce args
+  - draw recurse tree
+    - det state
+    - det old vs new state relation
+  - write DP
+    - inputs becomes axes (e.g 3 inputs => 3D DP)
 1. **Fibonacci** - 1D: since only need prev val and prev-prev val, beginning always directly affects answer
   - Decode Ways 
   - Climbing Stairs
@@ -12,13 +20,15 @@
 ```
 m = len(items)
 n = target
-[[0 for _ in range(n)] for _ in range(m)]
+dp = [[False for _ in range(n)] for _ in range(m)]
+
+dp[i][j] = dp[i - 1][j] or dp[i-1][j - items[i]]  //looks Up or UpLeft
 ```
 
 3. **Boundless Knapsack** (can repeat items) 1D: since only need to know best val at lower weight
   - Coin Change
 ```
-[0 for _ in range(target)]
+dp = [0 for _ in range(target)]
 ```
 4. **Longest Palindromic Subsequence** - 2D: 2 Pointers on 1 arr/str to delin a Window (Palindrome-specific)
 ```
@@ -33,23 +43,31 @@ n = len(s)
 dp = [[0 for _ in range(n)] for _ in range(n)] //seed the cells where i == j
 for i in range(n):
     dp[i][i] = 1
-for size in range(n):           // DIAGONAL traverse
-    for i in range(n - size + 1):
-        j = n - size - 1
+for cl in range(n):           // DIAGONAL traverse
+    for i in range(n - cl + 1): // "nickel"
+        j = i + cl - 1  // "icicle"
         if s[i] == s[j]
-            dp[i][j] = dp[i-1][j-1] + 2
+            dp[i][j] = dp[i+1][j-1] + 2   //looks LD
         else:
-            // logic for break in palindrome
-            // can resume by using other squares (if doing "subsequences", can use max(L, D, LD))
+            dp[i][j] = 
+                                // logic for break in palindrome
+                                // can resume by using other squares (if doing "subsequences", can use max(L, D, LD))
 return dp[0][-1]
 ```
 5. **Longest Common Substring** - 2 Pointers (1 on each arr/str), beginning might not directly affect answer
   - Longest Common Subseq
   - Longest Increasing Subseq (LIS)
 ```
-m = len(s1)
-n = len(s2)
-dp = [[0 for _ in range(n)] for _ in range(m)]
+def LCS(arr):
+    n = len(arr)
+    dp = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
+    for i in range(1, n + 1):
+        for j in range(1, n + 1):
+            if arr[j - 1] > arr[i - 1]:         #dp is 1-indexed. somtimes may need to add check for i != j
+                dp[i][j] = dp[i - 1][j - 1] + 1 #leftup + 1
+            else:
+                dp[i][j] = max(dp[i][j - 1], dp[i - 1][j])      #max of left and up
+    return dp[-1][-1]            #ret bottom-right
 ```
 
 - 2D array for X vs. Y "graph"
