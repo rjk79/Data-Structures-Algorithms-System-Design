@@ -1,7 +1,20 @@
 # Data Structures and Algorithms
+- Dynamic Programming
+- Sorts / Searches
+- Graphs 
+- Trees
+- Strings / Arrays
+- Intervals
+- Pathing
+- Bit
+- Other
+- Backtracking
+- Linked Lists
+- Stacks / Queues
+
 
 ### 1. Dynamic Programming
-- classify when:
+- Signs:
   - Overlapping Subproblems 
   - Optimal Substructure (buying travel tickets)
 - steps: 
@@ -17,12 +30,21 @@
   - Climbing Stairs
 2. **0/1 Knapsack** - 2D: since need 2 types of vals: avail items and target val
   - Equal Subset Sum Partition
-```
-m = len(items)
-n = target
-dp = [[False for _ in range(n)] for _ in range(m)]
-
-dp[i][j] = dp[i - 1][j] or dp[i-1][j - items[i]]  //looks Up or UpLeft
+def knapsack(vals, wts, W):
+    dp = [[0 for _ in range(W + 1)] for _ in range(len(vals) + 1)]
+    for i in range(len(dp)):
+        for w in range(len(dp[0])):
+            if i == 0 or w == 0:            #if you're not considering any items or you have 0 allowed wt
+                dp[i][w] = 0
+                                            # if curr item's wt is too large, we cant consider it for this curr wt
+                                            # so just refer to val above ()
+            elif wts[i - 1] > w:
+                dp[i][w] = dp[i - 1][w]
+            else:
+                                            # max of: best val while not considering the curr item and 
+                                            # val of curr item + best while not considering the curr item at the remaining weight
+                dp[i][w] = max(vals[i-1] + dp[i - 1][w - wts[i - 1]], dp[i - 1][w])
+    return dp[-1][-1]
 ```
 
 3. **Boundless Knapsack** (can repeat items) 1D: since only need to know best val at lower weight
@@ -52,22 +74,35 @@ for cl in range(n):           // DIAGONAL traverse
             dp[i][j] = 
                                 // logic for break in palindrome
                                 // can resume by using other squares (if doing "subsequences", can use max(L, D, LD))
-return dp[0][-1]
+return dp[0][-1]                // return TopRight
 ```
 5. **Longest Common Substring** - 2 Pointers (1 on each arr/str), beginning might not directly affect answer
-  - Longest Common Subseq
+  - Longest Common Subseq (LCS)
+```
+def LCS(text1, text2):
+    m = len(text1)
+    n = len(text2)  
+
+    dp = [[0 for _ in range(n + 1)] for _ in range(m + 1)]   //0 buffer
+    for i in range(1, len(dp)):                 
+        for j in range(1, len(dp[0])):  
+            if text1[i - 1] == text2[j - 1]:                // DP is 1-indexed
+                dp[i][j] = dp[i - 1][j - 1] + 1             // LeftUp + 1
+            else:
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])  //carry max(Left, Up)
+    return dp[-1][-1]        //BottomRight
+```
   - Longest Increasing Subseq (LIS)
 ```
-def LCS(arr):
-    n = len(arr)
-    dp = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
-    for i in range(1, n + 1):
-        for j in range(1, n + 1):
-            if arr[j - 1] > arr[i - 1]:         #dp is 1-indexed. somtimes may need to add check for i != j
-                dp[i][j] = dp[i - 1][j - 1] + 1 #leftup + 1
-            else:
-                dp[i][j] = max(dp[i][j - 1], dp[i - 1][j])      #max of left and up
-    return dp[-1][-1]            #ret bottom-right
+def LIS(nums):
+    if not nums: return 0
+    n = len(nums)
+    dp = [1 for _ in range(n)]
+    for i in range(n):
+        for j in range(i):
+            if nums[j] < nums[i]:           #   if [i] > [j] then set dp[j] to dp[i] as long as it sets a new best
+                dp[i] = max(dp[i], 1 + dp[j])
+    return max(dp) 
 ```
 
 - 2D array for X vs. Y "graph"
@@ -75,7 +110,10 @@ def LCS(arr):
 - Memoizing: @functools.lru_cache(None)     (not dp, only similar)
 
 ### 2. Sorts and Searches
-- Quicksort - worst case O(n^2)
+- Quick sort - worst case O(n^2)
+- Merge sort - stable
+- Insertion sort
+- Radix sort
 - Iterative B-search
 ```
     lo, hi = 0, len() 
@@ -127,6 +165,7 @@ while q:
 ### 4. Trees
 - acyclic graphs
 - Traversals
+  - inorder gives sorted
 - DFS
 ```
 .left
@@ -350,8 +389,15 @@ recurse([], 0)
 ```
 - .isdigit()
 - .isalpha()
+ 
+### 11. Linked Lists
+- fast and slow - finds middle, start of cycle
+- deleting - 3 pointers + fake node
 
-### 11. Extra Knowledge
+### 12. Stacks / Queues
+- .deque 
+
+### 13. Extra Knowledge
 - Rabin Karp - hashing to find pattern in string
   - turn curr window into hash (integer. e.g 234)
   - convert when window slides (e.g. 345)
@@ -369,6 +415,7 @@ recurse([], 0)
 - Minimum Spanning Trees 
   - Kruskal - sort edges, keep adding smallest edge (not nec contiguous) that would connect trees
   - Prim - choose random node, keep choosing smallest accessible edge that would add an unvisited node
+
 
 ### Python methods
 - .insert(index, el)
@@ -404,5 +451,4 @@ recurse([], 0)
   - .discard/.remove to remove 
 - range is a lazy iterable like iterators but range is not an iterator
   - iterators
-
 

@@ -15,12 +15,6 @@
 
 
 
-
-
-
-
-
-
 import itertools
 import collections
 import re
@@ -234,4 +228,111 @@ print(binarySearch([1, 4, 5, 6, 8, 10], 10))
 print(binarySearch([1, 4, 5, 6, 8, 10], 0))
 print(binarySearch([1, 4, 5, 6, 8, 10], 11))
 
+
+def serialize(root):
+        res = []
+        def recurse(root):
+            if not root: 
+                res.append("#")
+                return 
+            res.append(str(root.val))
+            recurse(root.left)
+            recurse(root.right)
+        # print(res)
+        recurse(root)
+        return " ".join(res)
+
+# BT
+def deserialize(data):
+    data = iter(data.split(" "))
+
+    def recurse():
+#           consumes the iterable
+        currVal = next(data)
+        if currVal == "#":
+            return None
+        curr = TreeNode(int(currVal))
+        curr.left = recurse()
+        curr.right = recurse()
+        return curr
+    return recurse()
+
+
+
+def serializeZ(root):
+        """Encodes a tree to a single string.
+        
+        :type root: TreeNode
+        :rtype: str
+        """
+        res = []
+        def recurse(root):
+            if not root: return 
+            res.append(str(root.val))
+                
+            recurse(root.left)
+
+            recurse(root.right)
+            
+        recurse(root)
+        res = ",".join(res)
+        return res 
+            
+
+def deserializeZ(data):
+    """Decodes your encoded data to tree.
+    
+    :type data: str
+    :rtype: TreeNode
+    """
+#       "213" parses data
+    if data == "": return
+    data = data.split(",")
+    data = [int(el) for el in data]
+#       i to j is searchable area
+    def recurse(i, j):
+        if i > j: return
+        if i == j: return TreeNode(data[i])
+        
+        root = TreeNode(data[i])
+        for k in range(i + 1, j+1):
+#   if we encounter a higher val in searchable area
+#   then create left and right subtree
+#   if there are no lower vals then [0:0] will res in no left subtree
+#   "k" is the partition
+            if data[k] > data[i]:
+                root.left = recurse(i + 1, k-1)
+                root.right = recurse(k, j)
+                return root
+#   if we dont, then just create left subtree
+        root.left = recurse(i+1, j)
+        return root
+    return recurse(0, len(data)-1)
+
+
+class TreeNode:
+    def __init__(self,x):
+        self.val = x
+        self.left = None
+        self.right = None
+
+a = TreeNode(3)
+b = TreeNode(1)
+c = TreeNode(2)
+a.left = b
+a.right = c
+#       a
+#      / \
+#     b   c
+# 
+#       3
+#      / \
+#     1   2
+# 
+
+serial = serialize(a)
+print(serial)
+
+serial = serializeZ(a)
+print(serial)
 
