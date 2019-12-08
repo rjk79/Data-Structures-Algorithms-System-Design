@@ -30,6 +30,7 @@
   - Climbing Stairs
 2. **0/1 Knapsack** - 2D: since need 2 types of vals: avail items and target val
   - Equal Subset Sum Partition
+```
 def knapsack(vals, wts, W):
     dp = [[0 for _ in range(W + 1)] for _ in range(len(vals) + 1)]
     for i in range(len(dp)):
