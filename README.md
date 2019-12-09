@@ -409,7 +409,23 @@ recurse([], 0)
  
 ### 11. Linked Lists
 - fast and slow - finds middle, start of cycle
-- deleting - 3 pointers + fake node
+- Deleting - 3 pointers 
+  - Ghost node
+- Reversing - 3 pointers
+  - Null node
+- Merging - 3 pointers
+  - swap between lists
+```
+tail, head = l1, l1
+l1 = l1.next            //l1 head already accounted for by tail
+while l2:
+    tail.next = l2
+    l2 = l2.next
+    tail = tail.next
+    if l1:
+        l1, l2 = l2, l1
+return head
+```
 
 ### 12. Stacks / Queues
 - .deque 
