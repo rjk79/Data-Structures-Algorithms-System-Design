@@ -50,6 +50,22 @@ def knapsack(vals, wts, W):
 
 3. **Boundless Knapsack** (can repeat items) 1D: since only need to know best val at lower weight
   - Coin Change
+def coinChange(self, coins: List[int], amount: int) -> int:
+     max = float('inf')
+                        # [0, inf, inf, inf...]
+        dp = [0] + amount * [max]
+                        # dont need to cover amount == 0 since we already have it in "dp"
+                        # add 1 to iter up to amount
+        for amt in range(1, amount + 1):
+                        # add 1 since we're spending/using a coin now
+                        # amt - coin can be == 0 since we need to hit 0..
+                        #           use max if you would go below 0 (invalid coin option)
+            dp[amt] = min([dp[amt - coin] if amt - coin >= 0 else max for coin in coins]) + 1
+                        # 2 elem arr and we idx either at 0 or 1
+                        # if dp.last == inf, True is 1 so then return -1
+                        # if dp has a val, False is 0 so return that val
+        print(dp)
+        return [dp[amount], -1][dp[amount] == max]
 ```
 dp = [0 for _ in range(target)]
 ```
