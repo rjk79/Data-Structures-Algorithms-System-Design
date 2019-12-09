@@ -95,6 +95,7 @@ return dp[0][-1]                // return TopRight
 ```
 5. **Longest Common Substring** - 2 Pointers (1 on each arr/str), beginning might not directly affect answer
   - Longest Common Subseq (LCS)
+  - Shortest Common Superseq
 ```
 def LCS(text1, text2):
     m = len(text1)
@@ -241,8 +242,8 @@ for end in range(len(string)):
     currCount += function(input[end])               //el at end contributes to currCount
 
     if :                                //if window does not satisfy (e.g end - start - 1 > constraint or currCount > constraint):
-    currCount -= function(input[start])                 //el at start is no longer being considered
-    start += 1
+        currCount -= function(input[start])                 //el at start is no longer being considered
+        start += 1
 
     bestLength = max(bestLength, end - start + 1)           //update bestLength
       

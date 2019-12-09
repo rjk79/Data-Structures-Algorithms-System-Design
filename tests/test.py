@@ -336,3 +336,20 @@ print(serial)
 serial = serializeZ(a)
 print(serial)
 
+def subseqGenerator(arr): 
+    res = []
+    def recurse(arr, curr):
+        if not arr:
+            if curr: res.append(curr)
+            return
+        recurse(arr[1:], curr + [arr[0]])
+        recurse(arr[1:], curr)
+    recurse(arr, [])
+    return res
+print("subseqs:")
+print(subseqGenerator([1, 2, 4]))
+# [1] [2] [4]
+# [1, 2]
+# [1, 4]
+# [2, 4]
+# [1, 2, 4]
