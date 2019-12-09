@@ -409,8 +409,8 @@ recurse([], 0)
  
 ### 11. Linked Lists
 - fast and slow - finds middle, start of cycle
-- Deleting - 3 pointers 
-  - Ghost node
+- Deleting -
+  - Dummy node
 - Reversing - 3 pointers
   - Null node
 - Merging - 3 pointers
