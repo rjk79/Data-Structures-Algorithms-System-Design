@@ -50,6 +50,7 @@ def knapsack(vals, wts, W):
 
 3. **Boundless Knapsack** (can repeat items) 1D: since only need to know best val at lower weight
   - Coin Change
+```
 def coinChange(self, coins: List[int], amount: int) -> int:
      max = float('inf')
                         # [0, inf, inf, inf...]
@@ -67,8 +68,7 @@ def coinChange(self, coins: List[int], amount: int) -> int:
         print(dp)
         return [dp[amount], -1][dp[amount] == max]
 ```
-dp = [0 for _ in range(target)]
-```
+
 4. **Longest Palindromic Subsequence** - 2D: 2 Pointers on 1 arr/str to delin a Window (Palindrome-specific)
 ```
 bbbab
