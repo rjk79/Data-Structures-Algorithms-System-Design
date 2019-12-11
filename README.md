@@ -232,6 +232,9 @@ class Trie:
 - Kadane’s - largest contig sum in subarr
 - Two pointers
 - Slow and Fast pointer
+- satisfying additional subarrays: 
+    res += count
+    count += 1
 - Moving Window
 ```
 counts = { } //usually a hash of element frequencies in window
@@ -405,8 +408,8 @@ def recurse(curr, idx)
     .pop
 recurse([], 0)
 ```
-- .isdigit()
-- .isalpha()
+- .isdigit  
+- .isalpha
  
 ### 11. Linked Lists
 - fast and slow - finds middle, start of cycle
