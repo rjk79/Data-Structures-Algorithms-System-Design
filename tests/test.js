@@ -59,4 +59,14 @@ async function f() {
     console.log(res)
 }
 
-f()
+// f()
+
+function summer(arg1){
+    if (arguments.length === 2) return arguments[0] + arguments[1]
+    return (arg2) => {
+        return arg1 + arg2
+    }
+}
+
+console.log(summer(1, 2))
+console.log(summer(1)(2))
