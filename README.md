@@ -455,6 +455,8 @@ return head
 
 
 ### Python methods
+- ternary
+  - x = 1 if True else 2
 - .insert(index, el)
 - [[for j in range] for i in range]
 - array iterating backwards
@@ -477,9 +479,13 @@ return head
   - del arr[] 
   - remove(val) 
   - insert(idx, val)
+  - "map" == [x**2 for x in arr]
+  - "filter" == [x for x in arr if x > 2]
+  - "flatten" == [y for x in graph[x] for y in x]
 - Sets:
   - declared with { }
-  - set1.union(set2) set1.intersection(set2)
+  - set1.union(set2) |= 
+  - set1.intersection(set2) &=
 - range(start, end, step)
 - sum(2darray, []) will flatten it
 
