@@ -473,14 +473,15 @@ return head
 - Strings
   - lstrip rstrip
   - startswith() endswith()
-- [*zip(*grid)]   starboard!
+- [list(row) for row in [*zip(*reversed(board))]]   double starboard! (Python3 syntax)
   - need star to unpack zip object
 - Arrays: 
   - del arr[] 
   - remove(val) 
   - insert(idx, val)
-  - "map" == [x**2 for x in arr]
-  - "filter" == [x for x in arr if x > 2]
+  - extend(arr2)
+  - "map" == [x**2 for x in arr] OR map(lambda a: , iter)
+  - "filter" == [x for x in arr if x > 2] OR filter(lambda a: iter)
   - "flatten" == [y for x in graph[x] for y in x]
 - Sets:
   - declared with { }

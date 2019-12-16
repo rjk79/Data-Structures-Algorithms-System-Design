@@ -18,8 +18,8 @@ def shortestSubarray(A, K):
 a = [84,-37,32,40,95]
 b = 167
 print(shortestSubarray(a, b))
-# [1, 84] [0, 0]
-# q = [, [2, 47], [3, 79]
+# [2, 47] [1, 84] [0, 0]
+# q = [[3, 79]
 # res = inf 4
 # cur = 0 84 47 79 119
 # i 0 1 2 3
