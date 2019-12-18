@@ -15,8 +15,10 @@ def shortestSubarray(A, K):
         import pdb;pdb.set_trace()
     return res if res < float('inf') else -1
 
-a = [84,-37,32,40,95]
-b = 167
+# a = [84,-37,32,40,95]
+# b = 167
+a = [2, -1, 2]
+b = 3
 print(shortestSubarray(a, b))
 # [2, 47] [1, 84] [0, 0]
 # q = [[3, 79]

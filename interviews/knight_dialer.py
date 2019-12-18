@@ -12,11 +12,12 @@ neighbors = {
 }
     
 def knightDialer(N):
-    prev = [1 for _ in range(10)]
+    prev = [1 for _ in range(10)] #moved once
     curr = [0 for _ in range(10)]
     for jump in range(N - 1):
         # look at all neighbors
-        # add them to get your own value
+        # add them to get your own value 
+        # (prev val at currCell doesnt matter for its own calculation)
         
         for i in range(len(curr)):
            
@@ -25,6 +26,7 @@ def knightDialer(N):
                 count += prev[neighbor] 
             curr[i] = count
         prev = curr[::]
+        print(curr)
     return sum(prev)
     # returns number of phone numbers
 
@@ -42,4 +44,4 @@ def knightDialer(N):
 
 # print (knightDialer(1))
 # print (knightDialer(2))
-print (knightDialer(3))
+print (knightDialer(4))
