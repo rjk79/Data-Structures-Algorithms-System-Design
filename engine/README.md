@@ -477,6 +477,8 @@ return head
 - [list(row) for row in [*zip(*reversed(board))]]   double starboard! (Python3 syntax)
   - need star to unpack zip object
 - Arrays: 
+  - any(el > 5 for el in arr)
+  - all(el > 5 for el in arr)
   - del arr[] 
   - remove(val) 
   - insert(idx, val)
