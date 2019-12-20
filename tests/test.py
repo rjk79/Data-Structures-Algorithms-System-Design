@@ -14,7 +14,6 @@
 
 
 
-
 import itertools
 import collections
 import re
@@ -353,3 +352,8 @@ print(subseqGenerator([1, 2, 4]))
 # [1, 4]
 # [2, 4]
 # [1, 2, 4]
+
+import threading
+# with threading.Semaphore(0):
+# with print("helloooo"):
+#     print("unlocked")

@@ -455,8 +455,9 @@ return head
 
 
 ### Python methods
+- list(string)      #how to split a word
 - ternary
-  - x = 1 if True else 2
+  - x = 1 if True else 2  #no colon
 - .insert(index, el)
 - [[for j in range] for i in range]
 - array iterating backwards
