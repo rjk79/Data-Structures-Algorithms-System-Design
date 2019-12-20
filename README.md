@@ -479,12 +479,15 @@ return head
 - Arrays: 
   - any(el > 5 for el in arr)
   - all(el > 5 for el in arr)
+    - len(set(a) == 1)  #checks if all the same val
   - del arr[] 
   - remove(val) 
   - insert(idx, val)
   - extend(arr2)
-  - "map" == [x**2 for x in arr] OR map(lambda a: , iter)
-  - "filter" == [x for x in arr if x > 2] OR filter(lambda a: iter)
+  - "map" == [x**2 for x in arr] 
+    - map(lambda a: , iter)
+  - "filter" == [x for x in arr if x > 2] 
+    - filter(lambda a: iter)
   - "flatten" == [y for x in graph[x] for y in x]
 - Sets:
   - declared with { }
