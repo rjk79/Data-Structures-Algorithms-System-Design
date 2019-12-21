@@ -1,4 +1,5 @@
 # Data Structures and Algorithms
+## Table of Contents
 - Dynamic Programming
 - Sorts / Searches
 - Graphs 
@@ -6,7 +7,7 @@
 - Strings / Arrays
 - Intervals
 - Pathing
-- Bit
+- Bits
 - Other
 - Backtracking
 - Linked Lists
@@ -30,7 +31,7 @@
   - Climbing Stairs
 2. **0/1 Knapsack** - 2D: since need 2 types of vals: avail items and target val
   - Equal Subset Sum Partition
-```
+```python
 def knapsack(vals, wts, W):
     dp = [[0 for _ in range(W + 1)] for _ in range(len(vals) + 1)]
     for i in range(len(dp)):
@@ -50,7 +51,7 @@ def knapsack(vals, wts, W):
 
 3. **Boundless Knapsack** (can repeat items) 1D: since only need to know best val at lower weight
   - Coin Change
-```
+```python
 def coinChange(self, coins: List[int], amount: int) -> int:
      max = float('inf')
                         # [0, inf, inf, inf...]
@@ -70,7 +71,7 @@ def coinChange(self, coins: List[int], amount: int) -> int:
 ```
 
 4. **Longest Palindromic Subsequence** - 2D: 2 Pointers on 1 arr/str to delin a Window (Palindrome-specific)
-```
+```python
 bbbab
 12345
                     1 2 3 3 4 <-- res
@@ -96,7 +97,7 @@ return dp[0][-1]                // return TopRight
 5. **Longest Common Substring** - 2 Pointers (1 on each arr/str), beginning might not directly affect answer
   - Longest Common Subseq (LCS)
   - Shortest Common Superseq
-```
+```python
 def LCS(text1, text2):
     m = len(text1)
     n = len(text2)  
@@ -111,7 +112,7 @@ def LCS(text1, text2):
     return dp[-1][-1]        //BottomRight
 ```
   - Longest Increasing Subseq (LIS)
-```
+```python
 def LIS(nums):
     if not nums: return 0
     n = len(nums)
@@ -133,7 +134,7 @@ def LIS(nums):
 - Insertion sort
 - Radix sort
 - Iterative B-search
-```
+```python
     lo, hi = 0, len() 
     while(lo < hi) {
     int mid = lo + (hi - lo) / 2;
@@ -162,13 +163,13 @@ def LIS(nums):
 - BFS, DFS
 - Graph - BFS
   - don't use [-1] for ranges (will mess up when combined with dirs)
-```
+```python
 dirs = []
 for x, y in dirs:
     xi, yj
     if 0 <= xi < len and 0 <= yj < len
 ```
-```
+```python
 visited = set()
 q = []
 while q:
@@ -190,7 +191,7 @@ while q:
 .right
 ```
 - BFS
-```
+```python
 q = []
 newQ = []
 newQ << .left
@@ -198,7 +199,7 @@ newQ << .right
 ```
 - Level Order
 - Tries
-```
+```python
 class TrieNode:
     def __init__(self):
         self.children = collections.defaultdict(TrieNode)   # makes itself
@@ -236,7 +237,7 @@ class Trie:
     res += count
     count += 1
 - Moving Window
-```
+```python
 counts = { } //usually a hash of element frequencies in window
 currCount //some constraint on window
 bestLength = 0
@@ -255,7 +256,7 @@ return bestLength
 ### 6. Intervals
 - Inserting
   - map based on start, [0], sort, bisect.bisect(arr, newInterval[0]), then .insert
-```
+```python
     starts = [interval[0] for interval in intervals] 
     starts.sort()
     idx = bisect.bisect(starts, newInterval[0])
@@ -264,7 +265,7 @@ return bestLength
 - Merging
   - if [i][1] > [i + 1][0] then set [i][1] to max([i][1], [i + 1][1])
   if current's end is GREATER than next's start, then set currs end to the GREATER end
-```
+```python
     merged = [intervals[0]]        //seed it with the 1st interval
     for i in range(1, len(intervals)):
         if merged[-1][1] >= intervals[i][0]:
@@ -284,7 +285,7 @@ return bestLength
   - visit all nodes once
     - for each node, check dist for all neighbors
 (source is “a”)
-```
+```python
 
         def findClosest(self, best, visited): //Find the closest (to orig src), unvisited node 
             res = None
@@ -333,7 +334,7 @@ return bestLength
 ### 9. Other Data Structures / Algorithms
 - Union Find (num of connected components)
   - keep finding a deeper root until the root matches the node
-```
+```python
 input: 
 edges = [[0, 1], [1, 2], [2, 3], [3, 4]]               // list of undirected edges
 n  = 5
@@ -361,7 +362,7 @@ for edge in edges:
   - when you've explored all prereqs/predecessors, then add it to "order"
   - DFS method (recursive calls) or BFS (Queue)
   - need to sometimes check for cycles too
-```
+```python
     input:
     words(sorted) = {"baa", "abcd", "abca", "cab", "cad"}
 
@@ -419,7 +420,7 @@ recurse([], 0)
   - Null node
 - Merging - 3 pointers
   - swap between lists
-```
+```python
 tail, head = l1, l1
 l1 = l1.next            //l1 head already accounted for by tail
 while l2:
