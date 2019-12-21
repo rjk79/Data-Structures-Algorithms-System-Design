@@ -74,25 +74,25 @@ def coinChange(self, coins: List[int], amount: int) -> int:
 ```python
 bbbab
 12345
-                    1 2 3 3 4 <-- res
-                    0 1 2 2 3
-                    0 0 1 1 3
-                    0 0 0 1 1
-                    0 0 0 0 1
+                    # 1 2 3 3 4 <-- res
+                    # 0 1 2 2 3
+                    # 0 0 1 1 3
+                    # 0 0 0 1 1
+                    # 0 0 0 0 1
 n = len(s)
-dp = [[0 for _ in range(n)] for _ in range(n)] //seed the cells where i == j
+dp = [[0 for _ in range(n)] for _ in range(n)] #seed the cells where i == j
 for i in range(n):
     dp[i][i] = 1
-for cl in range(n):           // DIAGONAL traverse
-    for i in range(n - cl + 1): // "nickel"
-        j = i + cl - 1  // "icicle"
+for cl in range(n):           # DIAGONAL traverse
+    for i in range(n - cl + 1): # "nickel"
+        j = i + cl - 1  # "icicle"
         if s[i] == s[j]
-            dp[i][j] = dp[i+1][j-1] + 2   //looks LD
+            dp[i][j] = dp[i+1][j-1] + 2   #looks LD
         else:
             dp[i][j] = 
-                                // logic for break in palindrome
-                                // can resume by using other squares (if doing "subsequences", can use max(L, D, LD))
-return dp[0][-1]                // return TopRight
+                                # logic for break in palindrome
+                                # can resume by using other squares (if doing "subsequences", can use max(L, D, LD))
+return dp[0][-1]                # return TopRight
 ```
 5. **Longest Common Substring** - 2 Pointers (1 on each arr/str), beginning might not directly affect answer
   - Longest Common Subseq (LCS)
@@ -102,14 +102,14 @@ def LCS(text1, text2):
     m = len(text1)
     n = len(text2)  
 
-    dp = [[0 for _ in range(n + 1)] for _ in range(m + 1)]   //0 buffer
+    dp = [[0 for _ in range(n + 1)] for _ in range(m + 1)]   #0 buffer
     for i in range(1, len(dp)):                 
         for j in range(1, len(dp[0])):  
-            if text1[i - 1] == text2[j - 1]:                // DP is 1-indexed
-                dp[i][j] = dp[i - 1][j - 1] + 1             // LeftUp + 1
+            if text1[i - 1] == text2[j - 1]:                # DP is 1-indexed
+                dp[i][j] = dp[i - 1][j - 1] + 1             # LeftUp + 1
             else:
-                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])  //carry max(Left, Up)
-    return dp[-1][-1]        //BottomRight
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])  #carry max(Left, Up)
+    return dp[-1][-1]        #BottomRight
 ```
   - Longest Increasing Subseq (LIS)
 ```python
@@ -150,7 +150,7 @@ def LIS(nums):
 - bisect.bisect(iterable, target) does BS but returns idx + 1 so do - 1 after
   - can also find where to insert a target
 - Reservoir Sampling
-- random.random()*3//1  (0, 1, 2)
+- random.random()*3#1  (0, 1, 2)
 
 ### 3. Graphs
 - visited
@@ -238,18 +238,18 @@ class Trie:
     count += 1
 - Moving Window
 ```python
-counts = { } //usually a hash of element frequencies in window
-currCount //some constraint on window
+counts = { } #usually a hash of element frequencies in window
+currCount #some constraint on window
 bestLength = 0
 start = 0
 for end in range(len(string)):
-    currCount += function(input[end])               //el at end contributes to currCount
+    currCount += function(input[end])               #el at end contributes to currCount
 
-    if :                                //if window does not satisfy (e.g end - start - 1 > constraint or currCount > constraint):
-        currCount -= function(input[start])                 //el at start is no longer being considered
+    if :                                #if window does not satisfy (e.g end - start - 1 > constraint or currCount > constraint):
+        currCount -= function(input[start])                 #el at start is no longer being considered
         start += 1
 
-    bestLength = max(bestLength, end - start + 1)           //update bestLength
+    bestLength = max(bestLength, end - start + 1)           #update bestLength
       
 return bestLength
 ```
@@ -266,7 +266,7 @@ return bestLength
   - if [i][1] > [i + 1][0] then set [i][1] to max([i][1], [i + 1][1])
   if current's end is GREATER than next's start, then set currs end to the GREATER end
 ```python
-    merged = [intervals[0]]        //seed it with the 1st interval
+    merged = [intervals[0]]        #seed it with the 1st interval
     for i in range(1, len(intervals)):
         if merged[-1][1] >= intervals[i][0]:
             merged[-1][1] = max(merged[-1][1], intervals[i][1])
@@ -287,19 +287,19 @@ return bestLength
 (source is “a”)
 ```python
 
-        def findClosest(self, best, visited): //Find the closest (to orig src), unvisited node 
+        def findClosest(self, best, visited): #Find the closest (to orig src), unvisited node 
             res = None
             for node in best:
                 if node not in visited and (not res or best[node] < best[res]):
                     res = node
             return res
-                                                    // K = starting node, N = # of nodes
-                                                    // all nodes receive signal
+                                                    # K = starting node, N = # of nodes
+                                                    # all nodes receive signal
         graph = collections.defaultdict(dict)
         for edge in edges:
-            graph[edge[0]][edge[1]] = edge[2]       //graph[src][dest] = edge
+            graph[edge[0]][edge[1]] = edge[2]       #graph[src][dest] = edge
   
-        best = dict()           // {a: 2, b: 3}
+        best = dict()           # {a: 2, b: 3}
         for i in range(1, N + 1):
             best[i] = float('inf')
         best[K] = 0
@@ -310,12 +310,12 @@ return bestLength
             closest = self.findClosest(best, visited)
             visited.add(closest)
             for neighbor in graph[closest]:
-                best[neighbor] = min(best[closest] + graph[closest][neighbor], best[neighbor])    // src to curr + curr to neigh
+                best[neighbor] = min(best[closest] + graph[closest][neighbor], best[neighbor])    # src to curr + curr to neigh
 
-        for val in best.values():       //check if we can reach every other node
+        for val in best.values():       #check if we can reach every other node
             if val == float('inf'): return -1
          
-        return          //some value in best                      
+        return          #some value in best                      
 ```
 
 ### 8. Bit manipulation
@@ -336,7 +336,7 @@ return bestLength
   - keep finding a deeper root until the root matches the node
 ```python
 input: 
-edges = [[0, 1], [1, 2], [2, 3], [3, 4]]               // list of undirected edges
+edges = [[0, 1], [1, 2], [2, 3], [3, 4]]               # list of undirected edges
 n  = 5
 
 n = 5 and edges = [[0, 1], [1, 2], [3, 4]]
@@ -352,9 +352,9 @@ for edge in edges:
     root2 = find(edge[1])
     if root1 != root2:
         roots[root1] = root2
-        //logic for being in same group
+        #logic for being in same group
     else:
-       //logic for being in diff group
+       #logic for being in diff group
 ```
 - Topological Sort (alien dic)
   - for Directed Acyclic graphs
@@ -422,7 +422,7 @@ recurse([], 0)
   - swap between lists
 ```python
 tail, head = l1, l1
-l1 = l1.next            //l1 head already accounted for by tail
+l1 = l1.next            #l1 head already accounted for by tail
 while l2:
     tail.next = l2
     l2 = l2.next
