@@ -43,7 +43,6 @@ def accountsMerge(accounts):
                 # doesnt compare sizes of sets
                 # we are going to make r2 a member of r1
                 root[r2] = r1
-                import pdb; pdb.set_trace()
             else:
                 d[email] = i
                 

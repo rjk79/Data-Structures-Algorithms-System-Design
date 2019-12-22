@@ -1,31 +1,4 @@
 import collections
-def invalidTransactions1(transactions):
-    class Transaction:
-        def __init__(self, name, time, amount, city):
-            self.name = name
-            self.time = int(time)
-            self.amount = int(amount)
-            self.city = city
-
-    res = set()
-    transactions = [Transaction(*t.split(',')) for t in transactions] # O(n) time
-    transactions.sort(key=lambda t: t.time) # O(nlogn) time
-
-    for i in range(len(transactions)): # O(n^2) time
-        t1 = transactions[i]
-        if t1.amount > 1000:
-            res.add("{},{},{},{}".format(t1.name, t1.time, t1.amount, t1.city))
-        for j in range(i+1, len(transactions)):
-            # import pdb;pdb.set_trace()
-            t2 = transactions[j]
-            # diff less than 60
-            if t2.name == t1.name and t2.time-t1.time <= 60 and t2.city != t1.city:
-                res.add("{},{},{},{}".format(t1.name, t1.time, t1.amount, t1.city))
-                res.add("{},{},{},{}".format(t2.name, t2.time, t2.amount, t2.city))
-    
-    res = list(res) # O(n) time
-    return res
-
 
 def invalidTransactions2(transactions):
         class Transaction:
@@ -62,3 +35,9 @@ def invalidTransactions2(transactions):
 # print(invalidTransactions1(["alice,20,800,mtv","bob,50,1200,mtv"])) #doesnt care about time of 1st one since 2nd one is invalidated by amount
 print(invalidTransactions2(["alice,20,800,mtv","bob,50,1200,mtv"])) #doesnt care about time of 1st one since 2nd one is invalidated by amount
 print(invalidTransactions2(["alice,20,800,mtv","alice,50,100,beijing"])) #doesnt care about time of 1st one since 2nd one is invalidated by amount
+
+# 1. make class
+# 2. make them all instances of that class
+# 3. sort by time
+# 4. map each person to their transactions
+# 5. compare every transaction to every other, checking all 4 conditions (amount, name, time, city)

@@ -1,4 +1,6 @@
 # Data Structures and Algorithms
+This is my personal Data Structures and Algorithms study guide for coding interviews.  It is based off of what many practice websites, articles, papers, and online courses recommend and it covers all of the fundamentals.
+
 ## Table of Contents
 - Dynamic Programming
 - Sorts / Searches
@@ -108,7 +110,7 @@ def LCS(text1, text2):
             if text1[i - 1] == text2[j - 1]:                # DP is 1-indexed
                 dp[i][j] = dp[i - 1][j - 1] + 1             # LeftUp + 1
             else:
-                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])  #carry max(Left, Up)
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])  #carry through max(Left, Up)
     return dp[-1][-1]        #BottomRight
 ```
   - Longest Increasing Subseq (LIS)
@@ -138,9 +140,9 @@ def LIS(nums):
     lo, hi = 0, len() 
     while(lo < hi) {
     int mid = lo + (hi - lo) / 2;
-    if(Special condition passed)(optional):
+    if( #Special condition passed)(optional):
         return mid; 
-    if(condition passed)
+    if( #condition passed)
     hi = mid;
     else 
     lo = mid + 1;
@@ -269,7 +271,7 @@ return bestLength
     merged = [intervals[0]]        #seed it with the 1st interval
     for i in range(1, len(intervals)):
         if merged[-1][1] >= intervals[i][0]:
-            merged[-1][1] = max(merged[-1][1], intervals[i][1])
+            merged[-1][1] = max(merged[-1][1], intervals[i][1]) # absorb it
         else:
             merged.append(intervals[i])
     return merged
@@ -325,8 +327,8 @@ return bestLength
   - finds the one duplicate el
 - << >>   multiply by 2
 - change / check / clear a specific bit
-  - shift a "1" over X times
-  - maybe ~ it
+  - shift a "1" over X times using <<
+  - maybe ~ (not) it
   - & or | it with your number
 - bin() to convert to bin
 - int(<binary string>, 2) to convert back to int
@@ -335,16 +337,16 @@ return bestLength
 - Union Find (num of connected components)
   - keep finding a deeper root until the root matches the node
 ```python
-input: 
-edges = [[0, 1], [1, 2], [2, 3], [3, 4]]               # list of undirected edges
-n  = 5
+# input: 
+# edges = [[0, 1], [1, 2], [2, 3], [3, 4]]               # list of undirected edges
+# n  = 5
 
-n = 5 and edges = [[0, 1], [1, 2], [3, 4]]
+# n = 5 and edges = [[0, 1], [1, 2], [3, 4]]
 
-roots = [i for i in range(len(edges))]
+roots = [i for i in range(n)]
 
 def find(key):
-    while key != roots[key]
+    while key != roots[key]:
         key = roots[key]
 
 for edge in edges:
@@ -352,7 +354,7 @@ for edge in edges:
     root2 = find(edge[1])
     if root1 != root2:
         roots[root1] = root2
-        #logic for being in same group
+        #logic for being in same group ex: count -= 1
     else:
        #logic for being in diff group
 ```
@@ -364,7 +366,7 @@ for edge in edges:
   - need to sometimes check for cycles too
 ```python
     input:
-    words(sorted) = {"baa", "abcd", "abca", "cab", "cad"}
+    words = {"baa", "abcd", "abca", "cab", "cad"} #(given sorted)
 
     prereqs = {
         : []
