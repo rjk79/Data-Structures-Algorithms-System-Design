@@ -357,3 +357,12 @@ import threading
 # with threading.Semaphore(0):
 # with print("helloooo"):
 #     print("unlocked")
+
+class Node:
+    def __init__(self, val):
+        self.val = val
+dic = dict()
+a = Node(1)
+dic[a] = 5
+b = a
+print("its here", b in dic)
