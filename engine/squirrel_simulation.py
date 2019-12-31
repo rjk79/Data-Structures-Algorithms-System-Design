@@ -19,6 +19,8 @@ for x, y in dirs:
 # calc dist from tree to every nut
 
 # Savings = Nut to Tree - Nut to Squirrel
+# just one way going from nut to tree is sunk cost
+# 
 # min(nut1 to tree - nut1 to squirrel, nut2 to tree - nut2 to squirrel ) 
 # + nut2 to tree * 2 
 #        T 

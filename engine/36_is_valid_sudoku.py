@@ -9,8 +9,7 @@ def isValidSudoku(board):
     for i in range(9):
         zipped = zip(*board)
         if not validUnit(zipped[i]): return False
-    # import pdb;pdb.set_trace()
-
+#       check boxes
     for i in [0, 3, 6]:
         for j in [0, 3, 6]:
             box = [row[j:j+3] for row in board[i:i+3]]

@@ -8,20 +8,23 @@ def findPeakElement(nums):
             return 0
         elif nums[1] > nums[0]:
             return 1
+    l = 0
+    r = len(nums)
+    while l < r:
     # need to convert to int outside of VSC
-    midIdx = int(len(nums) / 2)
-    mid = nums[midIdx]
-    left = nums[midIdx - 1] or float('-inf')
-    right = nums[midIdx + 1] or float('-inf')
-    if mid > left and mid > right: 
-        return midIdx
-    elif mid < left: #go left
-        return findPeakElement(nums[:midIdx])
-    elif mid < right: #go right
-    # classic + 1
-        return midIdx + findPeakElement(nums[midIdx + 1:]) + 1
-    else:
-        return findPeakElement(nums[:midIdx])
+        midIdx = (l + r) // 2
+        mid = nums[midIdx]
+        left = nums[midIdx - 1] or float('-inf')
+        right = nums[midIdx + 1] or float('-inf')
+        if mid > left and mid > right: 
+            return midIdx
+        elif mid < left: #go left
+            r = mid
+        elif mid < right: #go right
+        # classic + 1
+            l = mid + 1
+        else:
+            r = mid
 
 
 
