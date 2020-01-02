@@ -341,8 +341,8 @@ def subseqGenerator(arr):
         if not arr:
             if curr: res.append(curr)
             return
-        recurse(arr[1:], curr + [arr[0]])
-        recurse(arr[1:], curr)
+        recurse(arr[1:], curr + [arr[0]]) #include
+        recurse(arr[1:], curr) #dont include
     recurse(arr, [])
     return res
 print("subseqs:")
@@ -366,3 +366,44 @@ a = Node(1)
 dic[a] = 5
 b = a
 print("its here", b in dic)
+
+# path printer
+def pathPrinter(edges):
+    graph = collections.defaultdict(list)
+    for edge in edges:
+        graph[edge[0]].append(edge[1])
+        if edge[1] not in graph:
+            graph[edge[1]]
+    memo = {}
+    def dfs(node):
+        # if node in memo: return memo[node]
+        if not graph[node]:
+            return [[node]]
+        paths = []
+        for neigh in graph[node]:
+            for path in dfs(neigh):
+                paths.append([node] + path)
+        memo[node] = paths
+        return paths
+    res = []
+    for node in graph:
+        res.extend(dfs(node)) #concat
+    return res
+import time
+start = time.time()
+print(pathPrinter([[1, 2], [2, 3], [3, 4], [4, 5], [4, 6], [6, 7]]))
+print("It took:", time.time() - start)
+# 1 - 2 - 3 - 4 - 5
+#              \ 
+#               6 - 7
+
+a = 'atactgactagctatcgatcgatctgact'
+
+def counter(string):
+    count = 0
+    for char in string:
+        if char == 'a':
+            count += 1
+    return count
+
+print(counter(a))
