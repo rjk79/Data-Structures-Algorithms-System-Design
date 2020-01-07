@@ -121,7 +121,7 @@ def LIS(nums):
     dp = [1 for _ in range(n)]
     for i in range(n):
         for j in range(i):
-            if nums[j] < nums[i]:           #   if [i] > [j] then set dp[j] to dp[i] as long as it sets a new best
+            if nums[j] < nums[i]:           #   if curr val > earlier val then set dp[j] to dp[i] as long as it sets a new best
                 dp[i] = max(dp[i], 1 + dp[j])
     return max(dp) 
 ```
@@ -166,10 +166,12 @@ def LIS(nums):
 - Graph - BFS
   - don't use [-1] for ranges (will mess up when combined with dirs)
 ```python
+visited = set()
 dirs = []
 for x, y in dirs:
     xi, yj
     if 0 <= xi < len and 0 <= yj < len
+        if (xi, yj) not in visited:
 ```
 ```python
 visited = set()
@@ -204,8 +206,9 @@ newQ << .right
 ```python
 class TrieNode:
     def __init__(self):
-        self.children = collections.defaultdict(TrieNode)   # makes itself
+        self.children = collections.defaultdict(TrieNode)   # makes itself {ref: TreeNode}
         self.isWord = False
+
 class Trie:
     def __init__(self):
         self.root = TrieNode()  #abstracts away TrieNode
@@ -240,7 +243,7 @@ class Trie:
     count += 1
 - Moving Window
 ```python
-counts = { } #usually a hash of element frequencies in window
+counts = { } #usually a hash of element frequencies in window (collections.Counter)
 currCount #some constraint on window
 bestLength = 0
 start = 0
@@ -472,6 +475,7 @@ return head
   - Counter.items()
 - sorted(    .sort(key=
   - sorts by [0] by default for 2D arrs
+  - ([0], [1]) to sort by multiple fields
 - reversed(    .reverse
 - Find 	rfind()  	like indexOf
 - Strings
@@ -488,11 +492,12 @@ return head
   - insert(idx, val)
   - extend(arr2)
   - "map" == [x**2 for x in arr] 
-    - map(lambda a: , iter)
+    - map(lambda a: , <iter>)
   - "filter" == [x for x in arr if x > 2] 
-    - filter(lambda a: iter)
+    - filter(lambda a: <iter>)
   - "flatten" == [y for x in graph[x] for y in x]
 - Sets:
+  - can't hash lists / dicts (CAN hash objects)
   - declared with { }
   - set1.union(set2) |= 
   - set1.intersection(set2) &=

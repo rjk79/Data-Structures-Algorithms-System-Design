@@ -407,3 +407,39 @@ def counter(string):
     return count
 
 print(counter(a))
+
+a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+def printer(nums):
+    visited = set()
+    def dfs(posn):
+        dirs = [[0, 1], [1, 0], [-1, 0], [0, -1]]
+        i, j = posn
+        visited.add((i, j))
+        for x, y in dirs:
+            xi, yj = x + i, y + j
+            if 0 <= xi < len(nums) and 0 <= yj < len(nums[0]):
+                if (xi, yj) not in visited:
+                    print(xi, yj)
+                    dfs([xi, yj])
+    dfs([0, 0])
+printer(a)
+
+
+randomList = [1, 2, 3]
+a = TreeNode(1)
+b = TreeNode(2)
+f = TreeNode(4)
+c = set([a, b])
+
+e = dict()
+# c.add(randomList) #list is unhashable
+d = collections.defaultdict(list)
+d[a].append(b)
+d[b].append(a)
+# d[randomList].append(0) #list is unhashable
+# c.add(e) #dict is unhashable
+# c.add(d) #defaultdict is unhashable
+c.add(f)
+
+print(c)
+print(d)

@@ -1,0 +1,596 @@
+
+Consumer Relevance Engineering Lead
+San Francisco, CA|4 months ago
+#JoinTheFlock
+ 
+Learn more
+Sr. Data Scientist - Scaled Enforcement Heuristics
+San Francisco, CA|5 months ago
+The Scaled Enforcement heuristics team is responsible for proactively keeping spam and abuse off of Twitter
+ 
+Learn more
+Engineering Manager - Performance Ads Ranking
+San Francisco, CA|1 month ago
+#leveraging cutting edge machine learning algorithms to maximize ROI for advertisers while preserving Twitter Revenue and User experience
+ 
+Learn more
+Engineering Manager, Privacy and Data Protection Engineering
+San Francisco, CA|1 month ago
+Also known as the PDP Strike Team, Twitter's Privacy and Data Protection Engineering team is looking for an Engineering Manager to lead a team of engineers who are working to keep Twitter reliable, scalable, and secure.
+ 
+Learn more
+Engineering Manager - Ads Marketplace
+San Francisco, CA|2 months ago
+#LoveWhereYouWork
+ 
+Learn more
+Engineering Manager - Health Machine Learning Infrastructure
+San Francisco, CA|6 months ago
+Are you an engineer who’s passionate about defending online users against abuse, spam, and manipulation?
+ 
+Learn more
+Engineering Manager - Consumer Product
+San Francisco, CA|3 months ago
+Love Where You Work
+ 
+Learn more
+Senior DNS Software Engineer-Infrastructure Management Services
+San Francisco, CA|1 month ago
+Twitter’s real-time ecosystem operates at massive scale. We are looking for engineers who can harness this data through simple tools and services
+ 
+Learn more
+Senior Data Scientist-Technical Lead- Consumer Product- Health
+San Francisco, CA|8 months ago
+Are you a data scientist who’s interested in taking on challenging adversarial problems and passionate about defending online users
+ 
+Learn more
+Engineering Manager - Core Tweet Services
+San Francisco, CA|4 months ago
+Lead the team powering the entire user lifecycle of our Tweets!
+ 
+Learn more
+Staff Machine Learning Engineer - Recommendations Platform
+San Francisco, CA|1 month ago
+Our code operates at massive scale and speed, serving billions of requests per day, connecting hundreds of millions of active Twitter users to real-time information about their lives and the world we live in.
+ 
+Learn more
+Manager - IT Applications, Atlassian Tools
+San Francisco, CA|25 days ago
+Manager - IT Applications, Atlassian Tools
+ 
+Learn more
+Engineering Manager - Realtime Compute
+San Francisco, CA|2 months ago
+Come lead the team advancing the technology stack that Twitter’s real-time experience is built upon!
+ 
+Learn more
+Senior Site Reliability Engineer - Messaging
+San Francisco, CA|1 month ago
+Come join the flock as a Sr. Site Reliability Engineer (SRE) in Twitter’s Messaging team and build world class distributed pubsub systems and related infrastructure.
+ 
+Learn more
+Senior Linux Kernel Engineer
+San Francisco, CA|10 months ago
+#Jointheflock
+ 
+Learn more
+Engineering Manager, Revenue Productivity
+San Francisco, CA|2 months ago
+Join the team who is responsible for driving revenue growth and scaled efficiency through building effective and intelligent solutions. #lovewhereyouwork
+ 
+Learn more
+Lead Software Engineer - Capacity Planning
+San Francisco, CA|5 months ago
+Develop services, automation and processes for Capacity Planning at Twitter scale.
+ 
+Learn more
+Engineering Manager, Technical Education and Documentation
+San Francisco, CA|1 month ago
+Help engineers at Twitter get up to speed faster and stay in the zone longer by having on-demand access to the right technical information.
+ 
+Learn more
+Staff ML Engineer - Applied Modeling - Cortex
+San Francisco, CA|13 months ago
+At Cortex our purpose is to improve Twitter by enabling advanced and ethical AI.
+ 
+Learn more
+Senior Data Scientist, Conversations
+San Francisco, CA|1 month ago
+Help us define and measure the public conversation.
+ 
+Learn more
+Senior Site Reliability Engineer - Platform Infrastructure
+San Francisco, CA|1 month ago
+Come join the flock as a Site Reliability Engineer (SRE) in Twitter’s Platform team, and work to improve the reliability and performance of the next-generation of distributed systems.
+ 
+Learn more
+Machine Learning Engineer - Search Product
+San Francisco, CA|4 months ago
+Twitter Search is responsible for producing content timelines for keywords, trends, hashtags, topics, realtime events, even places and emojis.
+ 
+Learn more
+ML Researcher - Meta Cortex
+San Francisco, CA|9 months ago
+Join our Cortex team and improve Twitter by enabling advanced and ethical AI!
+ 
+Learn more
+Product Data Scientist - Ads Data Science
+San Francisco, CA|13 months ago
+Our team optimizes supply/demand, operation points and trade-offs for the ads marketplace, as well as improve product outcomes by applying d
+ 
+Learn more
+Staff Software Engineer - Realtime Compute Team
+San Francisco, CA|8 days ago
+Come lead advancement of the technology stack that Twitter’s real-time experience is built upon!
+ 
+Learn more
+Engineering Manager - Machine Learning Platform
+San Francisco, CA|2 months ago
+Providing frameworks and tools for model-building, distributed training, prediction and evaluation systems that meet such stringent demands!
+ 
+Learn more
+Senior Site Reliability Engineer - Revenue Engineering
+San Francisco, CA|1 month ago
+We’re building a next generation analytics framework that will power all Revenue data and eventually do the same for Twitter broadly. If you have a philosophy of building the tools that solve a broad set of problems, this is the team for you.
+ 
+Learn more
+Capacity Planning Analyst
+San Francisco, CA|4 months ago
+Develop services, automation, and processes for capacity planning at Twitter scale.
+ 
+Learn more
+IOS Engineer - Performance
+San Francisco, CA|25 days ago
+The iOS Performance team is part of the broader Twitter mobile team responsible for building Twitter for Android and Twitter for iOS.
+ 
+Learn more
+Software Engineer - Machine Learning Platform - Cortex
+San Francisco, CA|12 months ago
+Cortex is building a machine learning platform to make Twitter AI-first. Come help us build creative and scalable ML solutions!
+ 
+Learn more
+Software Engineer Developer Productivity - Engineering Effectiveness
+San Francisco, CA|8 days ago
+You own and drive the direction of the IDE experience for Twitter engineers!
+ 
+Learn more
+Senior Software Engineer (Backend) - ML Platform Tools - Cortex
+San Francisco, CA|2 months ago
+At Cortex our purpose is to improve Twitter by enabling advanced and ethical AI.
+ 
+Learn more
+Engineering Manager, Cloud Infrastructure Management
+San Francisco, CA|1 month ago
+Provisioning Engineering is looking for talented developers to help us build the software stack that runs Twitter’s physical server fleet.
+ 
+Learn more
+Senior Software Engineer - Observability (Full Stack)
+San Francisco, CA|8 months ago
+Observability Engineering builds highly scalable, real-time infrastructure to enable reliable monitoring & alerting for critical services.
+ 
+Learn more
+Senior Site Reliability Engineer - Traffic
+San Francisco, CA|23 days ago
+Join the Traffic team as a SRE and work on services that respond to hundreds of billions of request per day, impacting Twitter worldwide!
+ 
+Learn more
+Mobile Release Engineer
+San Francisco, CA|1 month ago
+Twitter’s Release Engineering team is seeking an experienced Mobile Tools & Release Engineer to get our cutting edge applications and services out to millions of users around the world.
+ 
+Learn more
+Senior Software Reliability Engineer (Senior SRE)
+San Francisco, CA|4 months ago
+CISS provides a portfolio of services including configuration management, identity access and control, software packaging and delivery in all Twitter data center zones.
+ 
+Learn more
+Software Engineer - CI Infrastructure - Engineering Effectiveness
+San Francisco, CA|24 days ago
+We are responsible for providing a secure, reliable, and performant CI service that allows Twitter engineers to build and validate their product changes. More broadly, Engineering Effectiveness helps engineers iterate faster and ship high-quality products with satisfying ease.
+ 
+Learn more
+Twitter University - Technical Instructor
+San Francisco, CA|8 months ago
+Twitter University - Technical Instructor
+ 
+Learn more
+Engineering Manager - Data and Enterprise Solutions
+San Francisco, CA|9 months ago
+#LoveWhereYouWork
+ 
+Learn more
+Applied Machine Learning engineer - Explore and Events Discovery
+San Francisco, CA|1 month ago
+Connect people with the topics and events happening now that are most relevant to them.
+ 
+Learn more
+Machine Learning Engineer - Health ML
+San Francisco, CA|12 months ago
+Are you passionate about defending online users against abuse, spam, and manipulation?
+ 
+Learn more
+Machine Learning Applied Engineer - Revenue Science
+San Francisco, CA|5 months ago
+Your ML infra work will scale the modeling efforts that power 15B+ ad impressions/day.
+ 
+Learn more
+Staff Software Engineer - Backend (Tweet Services)
+San Francisco, CA|1 month ago
+Love where you work.
+ 
+Learn more
+Sr. Technical Program Manager - Open Source
+San Francisco, CA|1 month ago
+Come help us make it simple to trust, ship, and grow Open Source at Twitter!
+ 
+Learn more
+Android Engineer - Consumer Product
+San Francisco, CA|24 days ago
+Join the team that brings the new Twitter experiences to millions of users on Android phones around the world!
+ 
+Learn more
+Community Manager, Developer Platform Developer and Enterprise Solutions (DES)
+San Francisco, CA|1 month ago
+Every day, developers across the world work with the Twitter APIs to build tools that analyze and help strengthen the public conversation #lovewhereyouwork
+ 
+Learn more
+Machine Learning Engineer - Search
+San Francisco, CA|2 months ago
+Twitter Search is the search engine for Twitter: it’s the place to find the most relevant and engaging content for any topic or interest.
+ 
+Learn more
+Sr. Machine Learning Engineer - Home Timeline
+San Francisco, CA|6 months ago
+Applying ranking, relevancy, and machine learning to the home timeline
+ 
+Learn more
+Senior Software Engineer, Revenue Productivity (Full-Stack)
+San Francisco, CA|7 months ago
+Join a new team focused on driving Twitter's revenue growth
+ 
+Learn more
+Machine Learning Research Engineer - META Cortex
+San Francisco, CA|2 months ago
+We believe in the power of bringing multiple perspectives together. META functions at the intersection of Machine Learning, Social Science, Policy, User Research and engages with numerous stakeholders across Twitter.
+ 
+Learn more
+Software Engineer, Site Reliability Engineering
+San Francisco, CA|3 months ago
+SREs work on improving the availability, scalability, performance and reliability of Twitter’s production services. Come join us.
+ 
+Learn more
+Engineering Manager - Revenue Data Platform (Revenue Platform)
+San Francisco, CA|2 months ago
+#LoveWhereYouWork
+ 
+Learn more
+Infrastructure Security Engineer
+San Francisco, CA|9 months ago
+As a Security Engineer at Twitter, you will help secure our users and data.
+ 
+Learn more
+Director of Engineering, Quality Engineering
+San Francisco, CA|1 month ago
+#JoinTheFlock
+ 
+Learn more
+Sr. Staff Machine Learning Applied Engineer - Revenue Science
+San Francisco, CA|2 months ago
+Our mission is to leverage cutting-edge machine learning techniques to maximize the value that Twitter’s business gets from advertising on social media.
+ 
+Learn more
+Sr. Staff Software Engineer- Revenue Platforms
+San Francisco, CA|3 months ago
+#jointheflock
+ 
+Learn more
+Sr. Software Engineer - "Open Source Program Office"
+San Francisco, CA|5 months ago
+Come help us make it simple to trust, ship, and grow Open Source at Twitter!
+ 
+Learn more
+Operations, Technical Program Manager - SF
+San Francisco, CA|16 months ago
+#lovewhereyouwork
+ 
+Learn more
+Senior Data Scientist, Home & Explore
+San Francisco, CA|2 months ago
+Do you enjoy influencing great product decisions?
+ 
+Learn more
+Senior Site Reliability Engineer - Observability
+San Francisco, CA|1 month ago
+Come join the flock as a Site Reliability Engineer (SRE) at Twitter, and work to improve the reliability and performance of the next-generation of distributed systems.
+ 
+Learn more
+Software Engineer (Systems) - Health Machine Learning Infrastructure
+San Francisco, CA|6 months ago
+Are you an engineer who’s passionate about defending online users against abuse, spam, and manipulation?
+ 
+Learn more
+Site Reliability Engineer - Messaging
+San Francisco, CA|1 month ago
+Come join the flock as a Site Reliability Engineer (SRE) in Twitter’s Messaging team and build world class distributed pubsub systems and related infrastructure.
+ 
+Learn more
+Sr. Manager, ML Software Engineering - Search
+San Francisco, CA|1 month ago
+Connect people with the topics and events happening now that are most relevant to them.
+ 
+Learn more
+Senior Test Engineer
+San Francisco, CA|24 days ago
+Twitter’s Quality Engineering team is seeking strong, talented Test Engineers to help create and deliver cutting edge applications used by millions of people around the world.
+ 
+Learn more
+Senior Director, Engineering Effectiveness
+San Francisco, CA|2 months ago
+Come Help Us Build Twitter
+ 
+Learn more
+Sr Manager, Strategy & Operations
+San Francisco, CA|2 months ago
+#Lovewhereyouwork
+ 
+Learn more
+Staff Software Engineer - Data Infrastructure
+San Francisco, CA|1 month ago
+#jointheflock
+ 
+Learn more
+Program manager, Twitter University
+San Francisco, CA|1 day ago
+Twitter University - Program manager!
+ 
+Learn more
+Staff Software Engineer, Systems - Product Insights and Experimentation
+San Francisco, CA|7 months ago
+Building world-class data engineering products
+ 
+Learn more
+Software Engineer - Real Time Storage Group
+San Francisco, CA|20 months ago
+Come build world class distributed databases, caching and messaging infrastructure.
+ 
+Learn more
+Software Backend System Engineer - Ads Prediction
+San Francisco, CA|13 months ago
+#we serve billions of ad impressions and generate millions of dollars in revenue per day
+ 
+Learn more
+Sr. Software Engineer - Revenue Processing Platform (RP-1)
+San Francisco, CA|4 months ago
+Rare opportunity to work on a critical product in a small team with a deep focus on distributed systems (global scale).
+ 
+Learn more
+Sr. Software Engineer (Backend) - Account Security
+San Francisco, CA|7 months ago
+Are you an engineer who’s passionate about building systems to strengthen the security of users' accounts?
+ 
+Learn more
+Software Engineer, Systems - Discovery
+San Francisco, CA|5 months ago
+Dedicated to getting the majority of the world to converse in public using Twitter.
+ 
+Learn more
+Senior Software Engineer - Full-Stack - Twitter Revenue Experience
+San Francisco, CA|1 month ago
+#LoveWhereYouWork - Twitter Revenue Experience
+ 
+Learn more
+Software Engineer - Revenue Data Platform (Revenue Platform)
+San Francisco, CA|9 months ago
+Revenue data has the largest data challenges in all of Twitter
+ 
+Learn more
+Software Engineer - Capacity Planning (Backend)
+San Francisco, CA|4 months ago
+Develop services, automation and processes for capacity planning at Twitter scale.
+ 
+Learn more
+Manager - IT Asset Management
+San Francisco, CA|25 days ago
+Manager - IT Asset Management
+ 
+Learn more
+IOS Engineer - Clients
+San Francisco, CA|25 days ago
+Bringing you all the features of Twitter to iOS
+ 
+Learn more
+Senior Software Engineer-Core Systems Libraries
+San Francisco, CA|2 months ago
+Come be a part of a community of hardworking, forward-thinking engineers who develop software to make Twitter fast, reliable, and available to customers worldwide.
+ 
+Learn more
+Software Engineer (Full Stack Web) - Embed Client
+San Francisco, CA|2 months ago
+Help us continue to grow Twitter’s visitor and off-platform audience of over one billion people.
+ 
+Learn more
+Software Engineer (Full Stack Web) - MoPub
+San Francisco, CA|16 months ago
+MoPub is the world’s largest mobile application advertising exchange and complete ad serving platform!
+ 
+Learn more
+Engineering Manager (Machine Learning) - Health ML
+San Francisco, CA|9 months ago
+Engineering leader who’s passionate about applying Machine Learning to defend online users against abuse and improve the health of Twitter!
+ 
+Learn more
+Engineering Manager (Machine Learning) - Home Timeline
+San Francisco, CA|6 months ago
+Applying ranking, relevancy, and prediction to the home timeline!
+ 
+Learn more
+Software Engineer - Big Data Engineering
+San Francisco, CA|9 months ago
+#jointheflock
+ 
+Learn more
+Sr. Software Engineer - Backend (Tweet Services)
+San Francisco, CA|1 month ago
+Love where you work.
+ 
+Learn more
+Cloud Data Engineer, Revenue Science
+San Francisco, CA|9 months ago
+build real-time and offline solutions to make data accessible and reliable while leveraging the largest-scale data processing technologies i
+ 
+Learn more
+Senior IT BI Engineer
+San Francisco, CA|1 month ago
+IT BI Engineer Twitter is a growing organization that faces new challenges as it evolves. The IT Enterprise Applications Team focuses on the building blocks of applications and tools that improve the productivity of employees across the company.
+ 
+Learn more
+Senior Software Engineer - Data Infrastructure
+San Francisco, CA|26 days ago
+#jointheflock
+ 
+Learn more
+Senior Software Engineer - Infrastructure Management Services
+San Francisco, CA|8 months ago
+Senior Software Engineer - Infrastructure Management Services
+ 
+Learn more
+Machine Learning Researcher (NLP) - Cortex Applied Machine Learning
+San Francisco, CA|1 month ago
+Join Twitter’s Machine Learning community and help transform the way Twitter applies and advances Natural Language Processing technologies.
+ 
+Learn more
+Sr. Software Engineer - Data Management Organization
+San Francisco, CA|3 months ago
+Join a brand new team chartered with making Twitter’s enormous store of data discoverable, useful and compliant.
+ 
+Learn more
+Data Engineer - Health Data Engineering
+San Francisco, CA|5 months ago
+Are you an engineer who’s passionate about defending online users against abuse, spam, and manipulation?
+ 
+Learn more
+Senior Software Engineer - Twitter Revenue Experience Team
+San Francisco, CA|7 months ago
+#Twitter’s revenue innovation center
+ 
+Learn more
+Sr. Software Engineer - Backend (Strato)
+San Francisco, CA|26 days ago
+Love where you work.
+ 
+Learn more
+Software Engineer, Content Visibility
+San Francisco, CA|18 days ago
+The Content Visibility team builds visibility controls and product features that give users agency over their Twitter experience, so that they feel safe to participate in the public conversation.
+ 
+Learn more
+Senior Software Engineer, Systems - Product Insights and Experimentation
+San Francisco, CA|6 months ago
+Building world-class data engineering products
+ 
+Learn more
+Software Engineer - Timelines & Conversations Infrastructure
+San Francisco, CA|21 months ago
+Creating the next generation platform to power public conversations on Twitter
+ 
+Learn more
+Sr. Manager, Technical Program Management
+San Francisco, CA|5 months ago
+#lovewhereyouwork
+ 
+Learn more
+Senior Software Engineer - Ad Serving (Revenue Platform)
+San Francisco, CA|1 month ago
+Our system serves 15+ billion impressions/ daily, which drives billions in revenue for us.
+ 
+Learn more
+Software Engineer - Core Infrastructure Provisioning Automation (CIPA)
+San Francisco, CA|1 month ago
+Our team builds, owns, and operates services providing bare metal provisioning, lifecycle management, and related services to internal Infrastructure customers across Twitter Platform.
+ 
+Learn more
+Senior Data Scientist, Growth
+San Francisco, CA|7 months ago
+Do you enjoy influencing great product decisions?
+ 
+Learn more
+Software Engineer - Systems (Hiring Events)
+San Francisco, CA|5 months ago
+Seeking talent to improve the reliability and efficiency of Twitter's core systems.
+ 
+Learn more
+Software Engineer - Privacy and Data Protection Engineering
+San Francisco, CA|2 months ago
+Come join our Privacy and Data Protection Eng Team!
+ 
+Learn more
+Senior Site Reliability Engineer - Revenue Engineering
+San Francisco, CA|2 months ago
+As an embedded SRE, you will work closely with the Ads Revenue Processing Platform Team to design, build, and operate reliable, scalable application software that is responsible for several critical areas:
+ 
+Learn more
+Machine Learning Engineer - Recommendations Platform
+San Francisco, CA|1 month ago
+Our code operates at massive scale and speed, serving billions of requests per day, connecting hundreds of millions of active Twitter users to real-time information about their lives and the world we live in.
+ 
+Learn more
+Staff Software Engineer (Kafka) - Messaging Team
+San Francisco, CA|24 days ago
+Come lead Twitter's journey to Kafka- building world class distributed databases, caching and messaging infrastructure.
+ 
+Learn more
+Software Engineer -(Backend Tools)-Engineering Effectiveness
+San Francisco, CA|4 months ago
+Come join our small cross-functional team Continuous Reliability Tooling team! We help over thousand engineers at Twitter ship hundreds of pieces of software every day to millions of customers .
+ 
+Learn more
+Sr. Engineering Manager
+San Francisco, CA|1 month ago
+Come radically improve the pace of feature development at Twitter!
+ 
+Learn more
+Senior Site Reliability Engineer - Revenue Engineering
+San Francisco, CA|3 months ago
+Twitter’s revenue organization operates services at massive scale. We are looking for a Site Reliability Engineer (SRE) to join the Embedded Revenue SRE Team and support the Ads Serving Team.
+ 
+Learn more
+Senior Software Engineer in Test
+San Francisco, CA|20 months ago
+Software Engineer in Test with strong coding & automation skills!
+ 
+Learn more
+Manager, IT Apps Engineering - CRM
+San Francisco, CA|2 months ago
+Come manage and grow a best-in-class Salesforce Engineering team!
+ 
+Learn more
+Sr. Staff Software Engineer - Public Cloud Services
+San Francisco, CA|29 days ago
+Twitter’s Public Cloud Services (PCS) team is leading the charge on taking the Twitter stack to the public cloud as part of Twitter's strategy to run services in a hybrid cloud environment.
+ 
+Learn more
+Sr. Software Engineer (Full Stack) - Privacy Engineering
+San Francisco, CA|7 months ago
+Respecting data privacy is of the highest importance to us!
+ 
+Learn more
+Software Engineer - Full-Stack - Twitter Revenue Experience
+San Francisco, CA|3 months ago
+#LoveWhereYouWork
+ 
+Learn more
+Software Engineer - MoPub Ad Serving
+San Francisco, CA|7 months ago
+MoPub is the world’s largest mobile application advertising exchange and complete ad serving platform. Come join our team!
+ 
+Learn more
+Software Engineer (Tools)-Build Team - Engineering Effectiveness
+San Francisco, CA|8 months ago
+Do you want to work on our Open source Build tool?
+ 
+Learn more
+Sr. Engineering Manager - Core API
+San Francisco, CA|7 months ago
+Come radically improve the pace of feature development at Twitter!
+ 
+Learn more
