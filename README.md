@@ -501,12 +501,11 @@ return head
   - declared with { }
   - set1.union(set2) |= 
   - set1.intersection(set2) &=
-- range(start, end, step)
-- sum(2darray, []) will flatten it
-
-- Sets: 
   - .add 
   - .discard/.remove to remove 
+- range(start, end, step)
+- sum(2darray, []) will flatten it
+ 
 - range is a lazy iterable like iterators but range is not an iterator
   - iterators
 
