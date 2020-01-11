@@ -258,6 +258,9 @@ for end in range(len(string)):
       
 return bestLength
 ```
+- in-place:
+  - make els - 
+
 ### 6. Intervals
 - Inserting
   - map based on start, [0], sort, bisect.bisect(arr, newInterval[0]), then .insert
@@ -439,6 +442,18 @@ return head
 
 ### 12. Stacks / Queues
 - .deque 
+- validParens
+```python
+count = 0
+for char in s:
+    if char == "(":
+        count += 1
+    elif char == ")":
+        count -= 1
+        if count < 0: return False
+return count == 0
+
+```
 
 ### 13. Extra Knowledge
 - Rabin Karp - hashing to find pattern in string
@@ -460,7 +475,7 @@ return head
   - Prim - choose random node, keep choosing smallest accessible edge that would add an unvisited node
 
 
-### Python methods
+### Key Python methods
 - list(string)      #how to split a word
 - ternary
   - x = 1 if True else 2  #no colon
@@ -504,7 +519,8 @@ return head
   - .add 
   - .discard/.remove to remove 
 - range(start, end, step)
-- sum(2darray, []) will flatten it
+- sum(<2darray>, []) will flatten it
+- isinstance(<item>, <type>)
  
 - range is a lazy iterable like iterators but range is not an iterator
   - iterators
