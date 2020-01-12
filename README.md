@@ -82,8 +82,8 @@ bbbab
                     # 0 0 0 1 1
                     # 0 0 0 0 1
 n = len(s)
-dp = [[0 for _ in range(n)] for _ in range(n)] #seed the cells where i == j
-for i in range(n):
+dp = [[0 for _ in range(n)] for _ in range(n)] 
+for i in range(n): #seed the cells where i == j
     dp[i][i] = 1
 for cl in range(n):           # DIAGONAL traverse
     for i in range(n - cl + 1): # "nickel"
@@ -336,7 +336,8 @@ return bestLength
   - shift a "1" over X times using <<
   - maybe ~ (not) it
   - & or | it with your number
-- bin() to convert to bin
+- bin() to convert to bin OR
+ - format(<num>, '#010b') to keep padding
 - int(<binary string>, 2) to convert back to int
 
 ### 9. Other Data Structures / Algorithms
@@ -490,14 +491,14 @@ return count == 0
   - Counter.items()
 - sorted(    .sort(key=
   - sorts by [0] by default for 2D arrs
-  - ([0], [1]) to sort by multiple fields
+  - ([0], [1]) *tuple* to sort by multiple fields
 - reversed(    .reverse
 - Find 	rfind()  	like indexOf
 - Strings
   - lstrip rstrip
   - startswith() endswith()
-- [list(row) for row in [*zip(*reversed(board))]]   double starboard! (Python3 syntax)
-  - need star to unpack zip object
+- [list(row) for row in list(zip(*reversed(board)))]  starboard! (Python3 syntax)
+  - need to convert zip object
 - Arrays: 
   - any(el > 5 for el in arr)
   - all(el > 5 for el in arr)

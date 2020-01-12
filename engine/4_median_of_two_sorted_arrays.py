@@ -1,48 +1,36 @@
 def findMedianSortedArrays(nums1, nums2):
-# nums1 has len 'm' and is cut at 'i'
-# nums2 has len 'n' and is cut at 'j'
     m = len(nums1)
     n = len(nums2)
+        
     if m > n:
-# swap everything if 1st arr is longer so that by default, 2nd arr is longer 
-# prevents go neg when j = halflen - i
-        nums1, nums2, m, n = nums2, nums1, n, m
-# add one so by default, num of els on left side is more?
-    half_len = (m + n + 1) / 2
-# round up so that we know to take from lower array
-    imin = 0
-    imax = m
-    while imin <= imax:
-# sum of idxs == 1/2 of combined len of arrs
-        i = (imin + imax) / 2
-        j = half_len - i
-# check for idx out of bounds (dont have to check j > 0 since this intrinsic checks that too) and then do diag check
-        if i > 0 and nums1[i - 1] > nums2[j]:
-# imin to imax denotes searchable range.
-# change searchable range instead of 'i' directly so that we take logn time
-# like (binary search)!!!
-            imin = i + 1 #left window pointer moves
-        elif j > 0 and nums2[j - 1] > nums1[i]:
-            imax = i - 1 #right window pointer moves
-        else:
+            nums1, nums2, m, n = nums2, nums1, n, m
+        if n == 0: return 
+        half_len = (m + n + 1) // 2
+        imin = 0
+        imax = m
+        while imin <= imax:
+            i = (imin + imax) // 2
+            j = half_len - i
 
-# correct 'i' is found
-# if 1st arr is partit such that there is nothing on left side
-            if i == 0: left_max = nums2[j-1]
-# if 2nd arr has nothing on left side
-            elif j == 0: left_max = nums1[i-1]
-            else: left_max = max(nums1[i-1], nums2[j-1])
-                
-            if i == m: right_min = nums2[j]
-            elif j == n: right_min = nums1[i]
-            else: right_min = min(nums1[i], nums2[j])
-# even num of els
-            # print(left_max, right_min)
-            if (m + n) % 2 == 0:
-                return (left_max + right_min)/2.0
-# odd num of els  
+            if i < m and nums2[j - 1] > nums1[i]:
+                imin = i + 1 #left window pointer moves =>
+            elif i > 0 and nums1[i - 1] > nums2[j]:
+
+                imax = i - 1 #right window pointer moves => 
             else:
-                return left_max 
+
+                if i == 0: left_max = nums2[j-1]
+                elif j == 0: left_max = nums1[i-1]
+                else: left_max = max(nums1[i-1], nums2[j-1])
+                print(i, j)
+                if (m + n) % 2 == 1:
+                    return left_max
+        
+                if i == m: right_min = nums2[j]
+                elif j == n: right_min = nums1[i]
+                else: right_min = min(nums1[i], nums2[j])
+
+                return (left_max + right_min)/2.0                    
 
 print(findMedianSortedArrays([1, 3], [2]))
 # nums1 = [1, 3]
