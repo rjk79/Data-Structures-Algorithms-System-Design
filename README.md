@@ -85,10 +85,10 @@ n = len(s)
 dp = [[0 for _ in range(n)] for _ in range(n)] 
 for i in range(n): #seed the cells where i == j
     dp[i][i] = 1
-for cl in range(n):           # DIAGONAL traverse
+for cl in range(2,n+1):           # DIAGONAL traverse
     for i in range(n - cl + 1): # "nickel"
         j = i + cl - 1  # "icicle"
-        if s[i] == s[j]
+        if s[i] == s[j]:
             dp[i][j] = dp[i+1][j-1] + 2   #looks LD
         else:
             dp[i][j] = 
@@ -226,8 +226,10 @@ class Trie:
 ```
 
 - Heaps
-  - heapq.heappush(arr, el)
-  - heapq.heappop(arr)
+  - heapq
+    - .heapify(<arr>)
+    - .heappush(<heap>, el)
+    - .heappop(<heap>)
   - sorts ASC by [0] so [0][0] is the smallest val it sees
   - insert and delete are O(logn)
   - creating a heap is NOT O(nlogn) even though it's n els * logn insert time...
@@ -422,13 +424,16 @@ recurse([], 0)
 - .isalpha
  
 ### 11. Linked Lists
-- fast and slow - finds middle, start of cycle
-- Deleting -
-  - Dummy node
+- Strategies:
+  - fast and slow - finds middle, start of cycle
+    - Deleting -
+    - Dummy node
 - Reversing - 3 pointers
-  - Null node
+    - Null node
 - Merging - 3 pointers
-  - swap between lists
+    - swap between lists
+- triple swaps
+
 ```python
 tail, head = l1, l1
 l1 = l1.next            #l1 head already accounted for by tail
@@ -526,3 +531,9 @@ return count == 0
 - range is a lazy iterable like iterators but range is not an iterator
   - iterators
 
+Suggestions:
+
+logn time => bSearch / bTree
+k branches at each level of recurs tree, n levels => k^n time
+top k => heap 
+items in arr/str interacting => stack

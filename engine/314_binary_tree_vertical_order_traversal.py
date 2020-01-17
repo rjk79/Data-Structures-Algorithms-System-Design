@@ -13,7 +13,7 @@ def verticalOrder(root):
         dic[val].append(node.val)
         if node.left: q.append((val - 1, node.left))
         if node.right: q.append((val + 1, node.right))
-    res = []
+    res = [] t
     keys = [key for key in dic]
     keys.sort()
     for key in keys:
