@@ -68,5 +68,49 @@ function summer(arg1){
     }
 }
 
-console.log(summer(1, 2))
-console.log(summer(1)(2))
+// console.log(summer(1, 2))
+// console.log(summer(1)(2))
+
+function dfs(start, end) {
+    const dirs = [[0, 1], [1, 0], [-1, 0], [0, -1]]
+    let paths = []
+    let visited = new Set()
+    function recurse(curr, point) {
+        
+        visited.add(point.toString())
+        if (JSON.stringify(point) === JSON.stringify(end)) {
+            paths.push(curr.concat([point]))
+            return
+        }
+        debugger
+        let [i, j] = point
+        for (let k = 0; k < dirs.length; k++) {
+            let [x, y] = dirs[k]
+            let [xi, yj] = [x + i, y + j]
+
+            if (0 <= xi && xi < 10 && 0 <= yj && yj < 10) {
+                if (!visited.has([xi, yj].toString())) {
+                
+                    recurse(curr.concat([point]), [xi, yj])
+                }
+            }
+        }
+        // visited.delete(point.toString())
+
+    }
+    recurse([], start)
+    console.log(paths)
+}
+
+// dfs([0, 0], [5, 5])
+
+function bfs(start, end) {
+    let visited = new Set()
+    function recurse(curr, point) {
+        const dirs = [[0, 1], [1, 0], [-1, 0], [0, -1]]
+
+    }
+    recurse
+}
+
+bfs([0, 0], [5, 5])

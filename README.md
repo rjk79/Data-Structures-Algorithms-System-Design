@@ -234,6 +234,8 @@ class Trie:
   - insert and delete are O(logn)
   - creating a heap is NOT O(nlogn) even though it's n els * logn insert time...
     - time is amortized to O(n)
+  - insert => sift up
+  - remove min/max => swap then sift down
 
 ### 5. Strings and Arrays
 - ord() and chr()
@@ -532,8 +534,13 @@ return count == 0
   - iterators
 
 Suggestions:
-
+LL => pointers
+rotated / sorted => bSearch
 logn time => bSearch / bTree
 k branches at each level of recurs tree, n levels => k^n time
 top k => heap 
 items in arr/str interacting => stack
+rectangle/meeting time/free time => interval
+anagram => hash
+subsequence => dp
+prereqs => topo sort

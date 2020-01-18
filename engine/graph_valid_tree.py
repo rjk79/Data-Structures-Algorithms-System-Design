@@ -1,5 +1,7 @@
+# verified
 import collections
 def validTree(n, edges):
+    if not edges: return n == 1
     graph = collections.defaultdict(list)
     for edge in edges:
         graph[edge[0]].append(edge[1])
@@ -10,17 +12,14 @@ def validTree(n, edges):
         visited.add(node)
         for neigh in graph[node]:
             if neigh not in visited:
-                import pdb;pdb.set_trace()
                 dfs(neigh, node)
             else:
-                if node == 3: import pdb;pdb.set_trace()
-
-                if parent and neigh != parent:
+                if parent and neigh != parent: # if youre trying to go back to something thats not your parent
                     valid.append(1)
             
     dfs(0, None)
-    return 1 not in valid and len(visited) == len(graph)
-
+#       needs to be 1. Acyclic 2. Joint
+    return 1 not in valid and len(visited) == n
 a = 5
 b = [[0,1],[1,2],[2,3],[1,3],[1,4]]
 # {0: [1], 1: [0, 2, 3, 4], 2: [1, 3], 3: [2, 1], 4: [1]})
