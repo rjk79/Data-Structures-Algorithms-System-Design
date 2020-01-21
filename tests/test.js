@@ -113,4 +113,17 @@ function bfs(start, end) {
     recurse
 }
 
-bfs([0, 0], [5, 5])
+// bfs([0, 0], [5, 5])
+
+// scope test 
+function test(){
+    // const a = 2
+    function test2(){
+        var a = 3
+        console.log(a)
+    }
+    test2()
+    console.log(a)
+}
+test()
+// console.log("hey")

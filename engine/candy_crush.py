@@ -26,7 +26,7 @@ def candyCrush(self, board: List[List[int]]) -> List[List[int]]:
 
 # rotate array
 # then look for triplets
-# set called Crushed
+# set called      Crushed
 # unrotate
             
             
