@@ -1,10 +1,28 @@
+# Input: 
+#     3
+#    / \
+#   0   4
+#    \
+#     2
+#    /
+#   1
+
+#   L = 1
+#   R = 3
+
+# Output: 
+#       3
+#      / 
+#    2   
+#   /
+#  1
 def trimmer(root, L, R):
     if not root:
         return None
     elif root.val > R:
-        trimmer(root.left, L, R)
+        trimmer(root.left, L, R) #pass children thru 
     elif root.val < L:
-        trimmer(root.right, L, R)
+        trimmer(root.right, L, R) #pass children thru 
     else:
         root.left = trimmer(root.left, L, R)
         root.right = trimmer(root.right, L, R)
