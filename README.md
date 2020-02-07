@@ -36,17 +36,18 @@ This is my personal Data Structures and Algorithms study guide for coding interv
 ```python
 def knapsack(vals, wts, W):
     dp = [[0 for _ in range(W + 1)] for _ in range(len(vals) + 1)]
-    for i in range(len(dp)):
-        for w in range(len(dp[0])):
+    for i in range(len(dp)):                #items
+        for w in range(len(dp[0])):         #weights
             if i == 0 or w == 0:            #if you're not considering any items or you have 0 allowed wt
                 dp[i][w] = 0
                                             # if curr item's wt is too large, we cant consider it for this curr wt
                                             # so just refer to val above ()
             elif wts[i - 1] > w:
-                dp[i][w] = dp[i - 1][w]
+                dp[i][w] = dp[i - 1][w]     # Up
             else:
                                             # max of: best val while not considering the curr item and 
                                             # val of curr item + best while not considering the curr item at the remaining weight
+                                            # max(UpLeft, Up)
                 dp[i][w] = max(vals[i-1] + dp[i - 1][w - wts[i - 1]], dp[i - 1][w])
     return dp[-1][-1]
 ```
@@ -64,6 +65,7 @@ def coinChange(self, coins: List[int], amount: int) -> int:
                         # add 1 since we're spending/using a coin now
                         # amt - coin can be == 0 since we need to hit 0..
                         #           use max if you would go below 0 (invalid coin option)
+                        # Left
             dp[amt] = min([dp[amt - coin] if amt - coin >= 0 else max for coin in coins]) + 1
                         # 2 elem arr and we idx either at 0 or 1
                         # if dp.last == inf, True is 1 so then return -1
@@ -121,7 +123,7 @@ def LIS(nums):
     dp = [1 for _ in range(n)]
     for i in range(n):
         for j in range(i):
-            if nums[j] < nums[i]:           #   if curr val > earlier val then set dp[j] to dp[i] as long as it sets a new best
+            if nums[j] < nums[i]:           #   if curr val > earlier val and it'd sets new best then look Left 
                 dp[i] = max(dp[i], 1 + dp[j])
     return max(dp) 
 ```
@@ -139,7 +141,7 @@ def LIS(nums):
 ```python
     lo, hi = 0, len() 
     while(lo < hi) {
-    int mid = lo + (hi - lo) / 2;
+        mid = lo + (hi - lo) / 2;
     if( #Special condition passed)(optional):
         return mid; 
     if( #condition passed)
@@ -203,6 +205,8 @@ newQ << .right
 ```
 - Level Order
 - Tries
+  - creating - #words * #avgLetters
+  - searching - #letters
 ```python
 class TrieNode:
     def __init__(self):
@@ -220,7 +224,7 @@ class Trie:
     def search(self, word):
         root = self.root
         for c in word:
-            root = root.children.get(c)
+            root = root.children.get(c) #does not create
             if not root: return False
         return root.isWord
 ```
@@ -233,7 +237,7 @@ class Trie:
   - sorts ASC by [0] so [0][0] is the smallest val it sees
   - insert and delete are O(logn)
   - creating a heap is NOT O(nlogn) even though it's n els * logn insert time...
-    - time is amortized to O(n)
+    - time is amortized to **O(n)**
   - insert => sift up
   - remove min/max => swap then sift down
 
@@ -280,7 +284,7 @@ return bestLength
 ```python
     merged = [intervals[0]]        #seed it with the 1st interval
     for i in range(1, len(intervals)):
-        if merged[-1][1] >= intervals[i][0]:
+        if merged[-1][1] >= intervals[i][0]: #last el's end
             merged[-1][1] = max(merged[-1][1], intervals[i][1]) # absorb it
         else:
             merged.append(intervals[i])
@@ -487,11 +491,10 @@ return count == 0
 - list(string)      #how to split a word
 - ternary
   - x = 1 if True else 2  #no colon
-- .insert(index, el)
 - [[for j in range] for i in range]
 - array iterating backwards
   - [::][::-1]
-  - [-1:0:-1]  (starts at [-1], doesnt touch [0]) (awkward...)
+  - dont use [-1:0:-1]  (starts at [-1], doesnt touch [0]) (awkward...)
 - collections
   - Defaultdict		like Hash.new(0)
   - Deque
@@ -538,9 +541,31 @@ LL => pointers
 rotated / sorted => bSearch
 logn time => bSearch / bTree
 k branches at each level of recurs tree, n levels => k^n time
-top k => heap 
+top k => min or max heap / quickselect
 items in arr/str interacting => stack
 rectangle/meeting time/free time => interval
 anagram => hash
 subsequence => dp
 prereqs => topo sort
+
+Time complexities:
+Trees: 
+    (n^2) to make BST (worst case)
+    (nlogn) to make AVL
+    (n) to make Heap
+    => heap is only way to improve time complex
+    finding kth smallest => klogn for minHeap / (n-k)logk time
+    O(n) to traverse tree   
+    
+    Search, insert, delete
+    Binary Tree
+        O(n)
+    BST
+        O(n) but technically, O(h) 
+    AVL
+        O(logn)
+    when to make a tree:
+        sorted array - O(n) insert. would need to reallocate (re-size)
+        linked list - O(n) search
+
+

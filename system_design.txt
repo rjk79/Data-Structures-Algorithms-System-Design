@@ -1,0 +1,37 @@
+
+Concurrency - when tasks are completed at the same time but not necessarily simultaneously
+Program - multiple processes
+Process - multiple threads 
+Thread - small unit of task
+Deadlock - threads waiting for each other
+Starvation - thread is blocked from a resource
+Memory Coherence - controls read and write to same location in memory
+  - all writes to the same location are seen in the same order by all threads 
+  - (print A)
+  - (everyone sees the same winner)
+Memory Consistency - controls read and write to other locations in memory
+  - allowed orderings of multiple threads on a multiprocessor 
+  - (print A print B)
+https://www.cs.utexas.edu/~bornholt/post/memory-models.html
+IPC - Inter Process Communication 
+TCP - Transmission Control Protocol - ensures reliable transmission of packets of data
+  - (postman)
+IP - Internet Protocol - 
+  - (clerk)
+Vertical Scaling
+Horizontal Scaling
+CDN - Content Delivery Network
+CAP - Consistency = read operations return the most recent write operation value
+https://mwhittaker.github.io/blog/an_illustrated_proof_of_the_cap_theorem/
+Availability  = all requests get response (success/failure)
+and Partition tolerant
+    - need replicated data
+ACID - transactions should have Atomicity, Consistency, Isolation, Durability
+BASE - Basic Availability, Soft state, Eventual consistency - stale data / approximate answers are OK
+
+Technologies
+Redis
+Zookeeper
+Cassandra
+Websocket
+md5

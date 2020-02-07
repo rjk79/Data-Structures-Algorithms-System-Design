@@ -406,7 +406,7 @@ def counter(string):
             count += 1
     return count
 
-print(counter(a))
+# print(counter(a))
 
 a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 def printer(nums):
@@ -422,7 +422,7 @@ def printer(nums):
                     print(xi, yj)
                     dfs([xi, yj])
     dfs([0, 0])
-printer(a)
+# printer(a)
 
 
 randomList = [1, 2, 3]
@@ -441,5 +441,25 @@ d[b].append(a)
 # c.add(d) #defaultdict is unhashable
 c.add(f)
 
-print(c)
-print(d)
+# print(c)
+# print(d)
+
+class CombinationIterator:
+
+    def __init__(self, characters, combinationLength):
+        self.combos =  list(itertools.combinations(list(characters), combinationLength))
+        self.combos = [list(el) for el in self.combos]
+        
+        self.combos = iter(self.combos)
+    def next(self):
+        return next(self.combos)
+
+    def hasNext(self):
+        return list(self.combos) == []
+
+a = CombinationIterator("apple", 2)
+print(a.next())
+
+people = [[7,0], [7,1], [6,1], [5,0], [5,2], [4,4]]
+people.sort(key=lambda (height,numTaller): (-height,numTaller))
+print(people)
