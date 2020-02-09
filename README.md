@@ -1,5 +1,5 @@
 # Data Structures and Algorithms
-This is my personal Data Structures and Algorithms study guide for coding interviews.  It is based off of what many practice websites, articles, papers, and online courses consider fundamental.
+This is my personal Data Structures and Algorithms study guide for coding interviews.  It is based off practice sites, articles, papers, online courses, and the roughly 500 Leetcode problems I've experienced.  
 
 ## Table of Contents
 - Dynamic Programming
