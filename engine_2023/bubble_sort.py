@@ -1,0 +1,1 @@
+#go from start to end of array each time

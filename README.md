@@ -553,8 +553,13 @@ Trees:
     (n^2) to make BST (worst case)
     (nlogn) to make AVL
     (n) to make Heap
-    => heap is only way to improve time complex
-    finding kth smallest => klogn for minHeap / (n-k)logk time
+    => heap is only way to improve time complexity
+    finding kth smallest => 
+      k log n => for minHeap
+      (n-k)log k => for maxHeap (this approach is faster)
+        see problem #215
+        
+        
     O(n) to traverse tree   
     
     Search, insert, delete

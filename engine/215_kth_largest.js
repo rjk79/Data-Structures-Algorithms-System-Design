@@ -82,3 +82,36 @@ class MaxHeap {
         return max
     }
 }
+
+
+
+// 4, 3, 2, 1
+// k = 2 (2nd largest)
+// Type of heap determines how els are stored, not what els are added/ignored
+
+// Min heap
+//   3
+//  /
+// 4
+
+// Create a min-heap of first K elements
+// For each element A[i], K onwards till n, compare it with root
+// If A[i] > root, replace root with A[i] and heapify the heap.
+// If A[i] < root, ignore and move on.
+// 3. Return the root of the heap.
+// Time Complexity: k + (n - k)logk
+
+
+
+// Max heap
+//     4
+//    / \
+//   2   3
+//  /
+// 1
+// Build a max-heap of size n of all elements
+// Extract the max elements K-1 times, i.e. delete the root and perform heapify operation K times.
+// Return the root of the heap (A[0] would be the root element in the array implementation of the heap)
+// Time Complexity: n + klogn
+
+// https://afteracademy.com/blog/kth-smallest-element-in-an-array/
